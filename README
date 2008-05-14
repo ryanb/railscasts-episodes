@@ -1,5 +1,3 @@
-This is the source code repository for the Railscasts (http://railscasts.com)
-episodes. Each episode is stored in a separate branch. Simply checkout the
-branch you want.
+This is the source code repository for the Railscasts episodes.
 
-git checkout episode-106
+http://railscasts.com
