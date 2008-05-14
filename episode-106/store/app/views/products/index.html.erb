@@ -1,0 +1,12 @@
+<% title "Products" %>
+
+
+<% for product in @products %>
+
+<div>
+  <h2><%= product.name %></h2>
+  <p><strong>Released at:</strong> <%= product.released_at.to_s(:long) %></p>
+</div>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>

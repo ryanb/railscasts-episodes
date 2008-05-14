@@ -1,0 +1,20 @@
+<% title "Product" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @product.name %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%=h @product.price %>
+</p>
+<p>
+  <strong>Released At:</strong>
+  <%=h @product.released_at %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_product_path(@product) %> |
+  <%= link_to "Destroy", @product, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", products_path %>
+</p>
