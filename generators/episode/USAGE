@@ -1,0 +1,3 @@
+Example:
+
+  script/generate episode 115 "This is the Episode Name"
