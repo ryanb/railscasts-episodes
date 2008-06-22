@@ -8,5 +8,6 @@ Console Commands
   Rails.cache.write('date', Date.today)
   Rails.cache.read('date')
   Rails.cache.fetch('time') { Time.now }
+  cache = ActiveSupport::Cache.lookup_store(:mem_cache_store)
   product = Product.first
   product.cache_key
