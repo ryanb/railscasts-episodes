@@ -1,0 +1,12 @@
+Railscasts Episode #115: Caching in Rails 2.1
+
+http://railscasts.com/episodes/115
+
+
+Console Commands
+
+  Rails.cache.write('date', Date.today)
+  Rails.cache.read('date')
+  Rails.cache.fetch('time') { Time.now }
+  product = Product.first
+  product.cache_key
