@@ -22,5 +22,5 @@ config.action_view.cache_template_loading            = true
 # config.cache_store = :memory_store
 # config.cache_store = :file_store, '/path/to/cache'
 # config.cache_store = :mem_cache_store
-# config.cache_store = :mem_cache_store, :namespace => 'storeapp'
+# config.cache_store = :mem_cache_store, { :namespace => 'storeapp' }
 # config.cache_store = :mem_cache_store, '123.456.78.9:1001', '123.456.78.9:1002'
