@@ -1,0 +1,3 @@
+page[@product].remove
+page.insert_html :top, :container, content_tag(:div, flash[:notice], :id => 'flash_notice')
+flash.discard

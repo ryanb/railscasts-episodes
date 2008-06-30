@@ -1,0 +1,10 @@
+Railscasts Episode #116: Selenium
+
+http://railscasts.com/episodes/116
+
+Outline
+- start server in test env
+- show testing product creation with Selenium IDE
+- install selenium on rails plugin
+- generate selenium test case for destroy action
+- fix confirmation bug

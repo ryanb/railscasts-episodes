@@ -1,0 +1,9 @@
+stapler:
+  category: office_supplies
+  name: Stapler
+  price: 3.25
+
+couch:
+  category: furniture
+  name: Couch
+  price: 399.99

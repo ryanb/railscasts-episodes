@@ -1,0 +1,9 @@
+setup :fixtures => :all
+product = Product.first
+open '/'
+click "css=#product_#{product.id} a:contains('Destroy')"
+assert_confirmation('*')
+wait_for_element_present "css=#flash_notice"
+assert_element_not_present "css=#product_#{product.id}"
+refresh
+assert_element_not_present "css=#product_#{product.id}"
