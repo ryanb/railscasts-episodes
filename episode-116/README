@@ -8,3 +8,11 @@ Outline
 - install selenium on rails plugin
 - generate selenium test case for destroy action
 - fix confirmation bug
+- setup config and run rake test:acceptance
+
+
+Commands
+
+  script/plugin install git://github.com/ryanb/selenium-on-rails.git
+  script/generate selenium destroy_product.rsel
+  rake test:acceptance
