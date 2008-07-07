@@ -1,0 +1,7 @@
+Railscasts Episode #117: Semi-Static Pages
+
+http://railscasts.com/episodes/117
+
+Commands
+
+  sudo gem install RedCloth --source=http://code.whytheluckystiff.net
