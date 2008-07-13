@@ -1,0 +1,8 @@
+Railscasts Episode #118: Liquid
+
+http://railscasts.com/episodes/118
+
+Commandsd
+
+  rake gems:install
+  gem server
