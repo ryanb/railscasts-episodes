@@ -1,0 +1,15 @@
+<% title @article.name %>
+
+<p class="author"><em>from <%=h @article.author_name %></em></p>
+
+<%= simple_format(@article.content) %>
+
+<% unless @article.comments.empty? %>
+  <h2><%= pluralize(@article.comments.size, 'comment') %></h2>
+  <div id="comments">
+    <%= render :partial => @article.comments %>
+  </div>
+<% end %>
+
+<h3>Add your comment:</h3>
+<%= render :partial => 'comments/form' %>

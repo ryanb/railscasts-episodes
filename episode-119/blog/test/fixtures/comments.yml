@@ -1,0 +1,21 @@
+first:
+  article: music
+  author_name: Lo0z3r
+  site_url: 
+  content: First p0st!!!11!
+  created_at: 2008-07-15 21:16
+
+learn_piano:
+  article: music
+  author_name: Dan Ikolu
+  site_url: http://example.com
+  content: I'm just starting to learn to play the piano.
+  created_at: 2008-07-16 13:48
+
+
+enjoy_music:
+  article: piano
+  author_name: Sally Johnson
+  site_url: 
+  content: I enjoy piano music, I just wish I could play.
+  created_at: 2008-07-19 09:02
