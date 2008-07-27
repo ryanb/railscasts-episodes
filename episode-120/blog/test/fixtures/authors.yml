@@ -1,0 +1,9 @@
+steve_bacon:
+  id: 1
+  first_name: Steve
+  last_name: Bacon
+
+jacob_sanders:
+  id: 2
+  first_name: Jacob
+  last_name: Sanders

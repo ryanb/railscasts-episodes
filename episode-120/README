@@ -1,0 +1,18 @@
+Railscasts Episode #120: Thinking Sphinx
+
+http://railscasts.com/episodes/120
+
+Commands    
+
+  script/plugin install git://github.com/freelancing-god/thinking-sphinx.git
+  rake thinking_sphinx:index
+  rake thinking_sphinx:start
+
+Search Options
+  
+  :include => :author 
+  :conditions => { :created_at => 1.week.ago.to_i..Time.now.to_i }
+  :order => :name
+  :field_weights => { :name => 20, :content => 10, :author_name => 5 }
+  :match_mode => :boolean
+  :page => 1, :per_page => 20

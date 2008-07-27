@@ -1,0 +1,5 @@
+tmp/*
+log/*
+*.sqlite3
+db/sphinx
+
