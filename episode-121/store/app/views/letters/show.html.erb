@@ -1,0 +1,5 @@
+<% title "Products for Letter #{@letter.char}" %>
+
+<p><%= link_to "Select a Letter", letters_path %></p>
+
+<%= render :partial => @letter.products %>
