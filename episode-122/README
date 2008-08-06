@@ -1,0 +1,44 @@
+Railscasts Episode #122: Passenger in Development
+
+http://railscasts.com/episodes/122
+
+
+Commands
+
+  sudo gem install passenger
+  sudo passenger-install-apache2-module
+  mate /etc/apache2/httpd.conf
+  sudo apachectl graceful
+  mate /etc/hosts
+  tail -f log/development
+  touch tmp/restart.txt
+
+
+Passenger Pref Pane
+
+  http://www.fngtps.com/2008/06/putting-the-pane-back-into-deployment
+
+
+Apache Config
+
+  LoadModule passenger_module /Library/Ruby/Gems/1.8/gems/passenger-2.0.2/ext/apache2/mod_passenger.so
+  PassengerRoot /Library/Ruby/Gems/1.8/gems/passenger-2.0.2
+  PassengerRuby /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+
+  NameVirtualHost *:80
+
+  <VirtualHost *:80>
+    ServerName railscasts.local
+    DocumentRoot "/Users/rbates/code/railscasts/public"
+    RailsEnv development
+    RailsAllowModRewrite off
+    <directory "/Users/rbates/code/railscasts/public">
+      Order allow,deny
+      Allow from all
+    </directory>
+  </VirtualHost>
+
+
+Hosts Config
+
+  127.0.0.1 railscasts.local
