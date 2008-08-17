@@ -1,0 +1,10 @@
+Railscasts Episode #123: Subdomains
+
+http://railscasts.com/episodes/123
+
+Commands
+
+  script/plugin install git://github.com/mbleigh/subdomain-fu.git
+  mate /etc/hosts
+  sudo apachectl graceful
+  dscacheutil -flushcache
