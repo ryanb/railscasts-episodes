@@ -1,0 +1,10 @@
+Railscasts Episode #124: Beta Invitations
+
+http://railscasts.com/episodes/124
+
+Commands
+
+  script/generate nifty_scaffold invitation sender_id:integer recipient_email:string token:string sent_at:datetime new
+  script/generate migration add_invitation_to_users invitation_id:integer invitation_limit:integer
+  script/generate mailer Mailer invitation
+

@@ -1,0 +1,13 @@
+<% title "Log In" %>
+
+<% form_tag session_path do -%>
+  <p>
+    <%= label_tag 'Login' %><br />
+    <%= text_field_tag :login, @login %>
+  </p>
+  <p>
+    <%= label_tag 'Password' %><br/>
+    <%= password_field_tag :password, nil %>
+  </p>
+  <p><%= submit_tag 'Log in' %></p>
+<% end -%>

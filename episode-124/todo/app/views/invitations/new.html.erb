@@ -1,0 +1,10 @@
+<% title "New Invitation" %>
+
+<%= error_messages_for :invitation %>
+<% form_for @invitation do |f| %>
+  <p>
+    <%= f.label :recipient_email, "Friend's email address" %><br />
+    <%= f.text_field :recipient_email %>
+  </p>
+  <p><%= f.submit "Invite!" %></p>
+<% end %>

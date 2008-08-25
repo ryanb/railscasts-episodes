@@ -1,0 +1,11 @@
+<% title "Welcome to Todo!" %>
+
+<p>We are currently in private beta. Please submit your email address below, and we will notify you when we are ready to accept more users.</p>
+
+<% form_for Invitation.new do |f| %>
+  <p>
+    <%= f.label :recipient_email, "Your Email:" %>
+    <%= f.text_field :recipient_email %>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

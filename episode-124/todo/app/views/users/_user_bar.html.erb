@@ -1,0 +1,13 @@
+<div id="user_bar">
+<% if logged_in? %>
+  <p>Welcome <%= current_user.login %> (<%= link_to 'log-out', logout_path %>)</p>
+  <% if current_user.invitation_limit > 0 %>
+    <p>
+      <%= link_to 'Send invitation', new_invitation_path %>
+      (<%= current_user.invitation_limit %> left)
+    </p>
+  <% end %>
+<% else %>
+  <p>If you have an account, <%= link_to "Log-in", login_path %></p>
+<% end %>
+</div>

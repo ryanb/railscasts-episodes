@@ -1,0 +1,23 @@
+<% title "Sign up" %>
+
+<%= error_messages_for :user %>
+<% form_for @user do |f| %>
+  <%= f.hidden_field :invitation_token %>
+  <p>
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit 'Sign up' %></p>
+<% end %>
