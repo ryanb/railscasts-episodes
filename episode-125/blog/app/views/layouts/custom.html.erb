@@ -1,0 +1,2 @@
+<%= Liquid::Template.parse(@current_blog.custom_layout_content).
+      render('page_content' => yield, 'page_title' => yield(:title)) %>

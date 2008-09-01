@@ -1,0 +1,9 @@
+Railscasts Episode #125: Dynamic Layouts
+
+http://railscasts.com/episodes/125
+
+
+Commands
+
+  script/generate migration add_layout_to_blogs layout_name:string custom_layout_content:text
+  rake db:migrate

@@ -1,0 +1,9 @@
+personal:
+  id: 1
+  name: Personal
+  subdomain: personal
+
+company:
+  id: 2
+  name: Company
+  subdomain: company
