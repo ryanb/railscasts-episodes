@@ -1,0 +1,10 @@
+<% title "People" %>
+
+<% for person in @people %>
+  <h3><%=h person.name %></h3>
+  <%=h person.email %><br />
+  <%=h person.company %><br />
+  <%=h person.street %><br />
+  <%=h person.city %>, <%=h person.state %> <%=h person.zip %><br />
+  Phone: <%=h person.phone %>
+<% end %>

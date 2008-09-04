@@ -1,0 +1,8 @@
+Railscasts Episode #126: Populating a Database
+
+http://railscasts.com/episodes/126
+
+Commands
+
+  gem install populator
+  gem install faker
