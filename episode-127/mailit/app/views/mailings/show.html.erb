@@ -1,0 +1,20 @@
+<% title "Mailing" %>
+
+<p>
+  <strong>Subject:</strong>
+  <%=h @mailing.subject %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @mailing.content %>
+</p>
+<p>
+  <strong>Delivered At:</strong>
+  <%=h @mailing.delivered_at %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_mailing_path(@mailing) %> |
+  <%= link_to "Destroy", @mailing, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", mailings_path %>
+</p>

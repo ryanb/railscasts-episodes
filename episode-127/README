@@ -1,0 +1,9 @@
+Railscasts Episode #127: Rake in Background
+
+http://railscasts.com/episodes/127
+
+
+Rake in background ideal for:
+- infrequent tasks
+- longer processes
+- strict access
