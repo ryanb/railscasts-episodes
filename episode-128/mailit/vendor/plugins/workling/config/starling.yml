@@ -1,0 +1,13 @@
+# By default, NotRemoteRunner is used when RAILS_ENV == 'test'.
+#
+# You can pass options to memcached client by nesting the key value pairs
+# under 'memcache_options'.
+#
+production:
+  listens_on: localhost:15151
+
+development:
+  listens_on: localhost:22122
+  
+test:
+  listens_on: localhost:12345

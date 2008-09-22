@@ -1,0 +1,133 @@
+Workling
+=============
+
+This little library lets you take code outside of your request/response cycle. You can configure how it should be run. Currently, 
+there is a Spawn runner and a Starling runner.
+
+This kind of sidesteps the issue of not knowing which Asynchronous code running method is the best for your rails app. Potentially, 
+you could swap in any mechanism you like. I asked Evan Weaver (http://blog.evanweaver.com/) what he thought: 
+
+"...If you really need a queue, use Starling, which Blaine Cook of Twitter
+released, like, yesterday. Or SQS if you need really huge storage.
+
+If you just want to fire and forget a local process as you say, I
+think Spawn is pretty good ( http://rubyforge.org/projects/spawn ). I
+haven't actually used it but seems like the best of the forking bunch.
+That should eliminate the startup overhead. On the other hand, you
+don't get any message reliability or cross-machine scheduling.
+
+..I agree that BDrb is shady (actually all of Drb is shady). ap4r is too
+bloated. Thruqueue is promising if you make it past the crazy
+dependencies list. BackgroundFu is like a worse Spawn."
+
+Example
+=======
+
+First, create a worker in app/workers:
+
+class AnalyticsWorker < Workling::Base
+  def potential_invited(options)
+    Hit.create :potential_user_id => options[:potential_user_id], :action => "invited"
+  end
+    
+  def potential_converted(options)
+    Hit.create :potential_user_id => options[:potential_user_id], :action => "converted"
+  end
+end
+
+then, call it like this anywhere in your code:
+
+Workling::Remote.run(:analytics_worker, :potential_invited, :potential_user_id => 1234)
+
+Runners
+=======
+
+configure runners in your environment.rb:
+
+Workling::Remote.dispatcher = Workling::Remote::Runners::NotRemoteRunner.new (this runner just executes everything normally)
+
+SpawnRunner
+===========
+
+this uses http://rubyforge.org/projects/spawn to take the process out of the request cycle. 
+
+configure it like this: 
+
+SpawnRunner.options = { :method => :spawn }
+
+StarlingRunner
+==============
+
+This uses Twitter's Starling to enable your asynch code to run on different VMs. Activate it like this in your environment:
+
+Workling::Remote.dispatcher = Workling::Remote::Runners::StarlingRunner.new
+
+This takes care of several things:
+
+1: mapping of queue names to worker code. this is done with Workling::Starling::Routing::ClassAndMethodRouting, but you can use your own by sublassing 
+Workling::Starling::Routing::Base. Some examples of Worker to queue routing:
+
+AnalyticsWorker class above routes the queues 'analytics_worker:potential_invited' and 'analytics_worker:potential_converted'
+to those methods on AnalyticsWorker. If you put your worker in a module, the queue will start with the_module_name:.
+
+2: there's a client daemon that waits for messages and dispatches these to the responsible workers. if you intend to run this
+on a remote machine, then just check out your rails project there and start it up like this:
+
+Other runners
+=============
+
+workling comes with a spawn based runner. this currently seems to be one of the better spawning/forking options. use this if you don’t want to run a separate starling server in your setup.
+
+
+Getting started with starling and workling
+==========================================
+
+start by installing starling and a memcached client. then install workling into your rails application. install the spawn plugin if you want to use spawn as your runner.
+
+sudo gem install starling --include-dependencies
+sudo gem install memcache-client --include-dependencies
+./script/plugin install http://svn.playtype.net/plugins/workling/
+./script/plugin install http://spawn.rubyforge.org/svn/spawn/
+
+now you can start the little twitter birdie, followed by workling. and off you go!
+
+mkdir /var/spool/starling
+sudo starling -d
+script/workling_starling_client start
+
+also make sure you configure your starling server to your needs in config/starling.yml before you push this onto prodcution.
+
+Progress indicators and return stores
+=====================================
+
+Your worklings can write back to a return store. This allows you to write progress indicators, or access results from your workling. As above, this is fairly slim. The cool thing is, that you can swap in any return store implementation you like without changing your code. For tests, there is a memory return store, for production use there is currently a starling return store. You can easily add a new return store (over the database for instance) by subclassing Workling::Return::Store::Base. Configure it like this in your test environment:
+
+Workling::Return::Store.instance = Workling::Return::Store::MemoryReturnStore.new
+
+Here is an example workling that crawls an addressbook and puts results in a return store. Worling makes sure you have options[:uid] in your hash - pass this into the return store with your results. 
+
+require 'blackbook'
+class NetworkWorker < Workling::Base
+  def search(options)
+    results = Blackbook.get(options[:key], options[:username], options[:password])
+    Workling::Return.set(options[:uid], results)
+  end
+end
+
+call your workling as above: 
+
+@uid = Workling::Remote.run(:network_worker, :search, { :key => :gmail, :username => "foo@gmail.com", :password => "bar" })
+
+or simply: 
+
+@uid = NetworkWorker.asynch_search({ :key => :gmail, :username => "foo@gmail.com", :password => "bar" })
+
+you can now use the @uid to query the return store: 
+
+results = Workling::Return.get(@uid)
+
+of course, you can use this for progress indicators. just put the progress into the return store. 
+
+enjoy!
+
+Copyright (c) 2008 play/type GmbH, released under the MIT license

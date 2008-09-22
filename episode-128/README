@@ -1,0 +1,10 @@
+Railscasts Episode #128: Starling and Workling
+
+http://railscasts.com/episodes/128
+
+Commands:
+
+  gem install starling
+  script/plugin install http://svn.playtype.net/plugins/workling/
+  starling -d -P tmp/pids/starling.pid -q log/
+  script/workling_starling_client start

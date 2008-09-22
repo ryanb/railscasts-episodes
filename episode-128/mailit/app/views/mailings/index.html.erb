@@ -1,0 +1,15 @@
+<% title "Mailings" %>
+
+<% for mailing in @mailings %>
+  <div class="mailing">
+    <h2><%= link_to h(mailing.subject), mailing %></h2>
+    <% unless mailing.delivered_at.nil? %>
+      Delivered on: <%= mailing.delivered_at.to_s(:long) %><br />
+    <% end %>
+    <%= link_to "Edit", edit_mailing_path(mailing) %> |
+    <%= link_to "Destroy", mailing, :confirm => 'Are you sure?', :method => :delete %> |
+    <%= link_to "Deliver", deliver_mailing_path(mailing), :confirm => 'Are you sure?', :method => :post %>
+  </div>
+<% end %>
+
+<p><%= link_to "New Mailing", new_mailing_path %></p>
