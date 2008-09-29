@@ -1,0 +1,14 @@
+Daemon Generator
+================
+
+To get yourself rolling:
+> sudo gem install daemons
+> ./script/generate daemon <name>
+
+Then insert your code in the lib/daemons/<name>.rb stub. All pid's and logs will live in the normal log/ folder.  This helps to make things Capistrano friendly.
+
+Individual control script:
+> ./lib/daemons/<name>_ctl [start|stop|restart]
+
+App-wide control script (I add this to my capistrano recipe's after_restart task):
+> ./script/daemons [start|stop|restart]

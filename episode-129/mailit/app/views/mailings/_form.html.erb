@@ -1,0 +1,16 @@
+<%= error_messages_for :mailing %>
+<% form_for @mailing do |f| %>
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :rows => 8 %>
+  </p>
+  <p>
+    <%= f.label :scheduled_at, "Schedule Delivery:" %><br />
+    <%= f.datetime_select :scheduled_at %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

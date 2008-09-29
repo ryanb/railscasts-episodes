@@ -1,0 +1,10 @@
+Railscasts Episode #129: Custom Daemon
+
+http://railscasts.com/episodes/129
+
+Commands:
+
+  sudo gem install daemons
+  script/plugin install git://github.com/dougal/daemon_generator.git
+  script/generate daemon mailer
+  RAILS_ENV=development lib/daemons/mailer_ctl start
