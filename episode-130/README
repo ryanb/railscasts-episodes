@@ -1,3 +1,11 @@
 Railscasts Episode #130: Monitoring with God
 
 http://railscasts.com/episodes/130
+
+
+Commands:
+  sudo gem install god
+  god -c config/mailit.god
+  god status
+  god log mailit-workling
+  kill `cat log/workling.pid`
