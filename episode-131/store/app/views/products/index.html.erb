@@ -1,0 +1,15 @@
+<% title "Products" %>
+
+<% for product in @products %>
+  <div class="product">
+    <h3>
+      <%= link_to h(product.name), product %>
+      <%= number_to_currency(product.price) %>
+    </h3>
+    Category: <%=h product.category.name %>
+    <% form_for product.cart_items.build do |f| %>
+      <%= f.hidden_field :product_id %>
+      <%= f.submit "Add to Cart" %>
+    <% end %>
+  </div>
+<% end %>

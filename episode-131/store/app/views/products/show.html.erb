@@ -1,0 +1,25 @@
+<% title @product.name %>
+
+<%= simple_format h(@product.description) %>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency @product.price %>
+</p>
+
+<% form_for @product.cart_items.build do |f| %>
+  <%= f.hidden_field :product_id %>
+  <%= f.submit "Add to Cart" %>
+<% end %>
+
+<% unless @product.category.nil? %>
+<p>
+  <strong>Category:</strong>
+  <%= link_to h(@product.category.name), @product.category %>
+</p>
+<% end %>
+
+
+<p>
+  <%= link_to "Back to Products", products_path %>
+</p>
