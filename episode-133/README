@@ -1,0 +1,18 @@
+Railscasts Episode #133: Capistrano Tasks
+
+http://railscasts.com/episodes/133
+
+
+Directory Structure
+
+  myapp/releases
+  myapp/current -> releases/20081019001122
+  myapp/shared
+
+
+cap deploy
+
+  deploy:update_code
+  deploy:symlink_shared
+  deploy:symlink
+  deploy:restart
