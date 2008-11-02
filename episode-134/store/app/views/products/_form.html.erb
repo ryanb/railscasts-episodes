@@ -1,0 +1,22 @@
+<% form_for @product, :html => { :multipart => true } do |f| %>
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows => 10 %>
+  </p>
+  <p>
+    <%= f.file_field :photo %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

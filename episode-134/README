@@ -1,0 +1,10 @@
+Railscasts Episode #134: Paperclip
+
+http://railscasts.com/episodes/134
+
+
+Commands
+
+  script/plugin install git://github.com/thoughtbot/paperclip.git
+  script/generate paperclip product photo
+  rake db:migrate
