@@ -1,0 +1,4 @@
+$("#new_review").before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#reviews_count").html("<%= pluralize(@review.product.reviews.count, 'Review') %>");
+$("#reviews").append("<%= escape_javascript(render(:partial => @review)) %>");
+$("#new_review")[0].reset();

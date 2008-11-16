@@ -1,0 +1,9 @@
+one:
+  product_id: 1
+  name: MyString
+  content: MyText
+
+two:
+  product_id: 1
+  name: MyString
+  content: MyText

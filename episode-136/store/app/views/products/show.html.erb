@@ -1,0 +1,26 @@
+<% title @product.name %>
+
+<p>
+  Price: <%= number_to_currency @product.price %>
+</p>
+
+<h3 id="reviews_count"><%= pluralize(@product.reviews.size, "Review") %></h3>
+
+<div id="reviews">
+  <%= render :partial => @product.reviews %>
+</div>
+
+<h3>Add a Review</h3>
+
+<% form_for Review.new(:product => @product) do |f| %>
+  <%= f.hidden_field :product_id %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :content, "Review" %><br />
+    <%= f.text_area :content, :rows => 8 %>
+  </p>
+  <p><%= f.submit "Add Review" %></p>
+<% end %>
