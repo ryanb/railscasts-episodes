@@ -7,9 +7,10 @@ jQuery.ajaxSetup({
 
 jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
-    $.post($(this).attr("action"), $(this).serialize(), null, "script");
+    $.post(this.action, $(this).serialize(), null, "script");
     return false;
   })
+  return this;
 };
 
 $(document).ready(function() {
