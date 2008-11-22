@@ -1,0 +1,11 @@
+Railscasts Episode #137: Memoization
+
+http://railscasts.com/episodes/137
+
+Commands
+
+  sudo gem install rails
+  sudo gem update --system
+  sudo gem install rubygems-update
+  sudo update_rubygems
+  gem -v
