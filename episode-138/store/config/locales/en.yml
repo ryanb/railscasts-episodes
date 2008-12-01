@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  welcome:
+    title: "Welcome"
+    paragraph: "Thank you for visiting our store. Please browse through the products below and buy some stuff. You'll love the unique quality and workmanship put into these items."
+  products:
+    title: "Products"
+    released: "Released"
+  flash:
+    login: "Logged in successfully."

@@ -1,0 +1,15 @@
+<% title t('welcome.title') %>
+
+<p><%= t 'welcome.paragraph' %></p>
+
+<h2><%= t 'products.title' %></h2>
+
+<% for product in @products %>
+  <h3>
+    <%= link_to h(product.name), product %>
+    <%= number_to_currency(product.price) %>
+  </h3>
+  <div class="date_released">
+    <em><%= t 'products.released' %>: <%= product.created_at.strftime("%m/%d/%Y") %></em>
+  </div>
+<% end %>

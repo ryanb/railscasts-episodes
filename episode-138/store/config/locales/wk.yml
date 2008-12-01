@@ -1,0 +1,19 @@
+wk:
+  welcome:
+    title: "Wyah"
+    paragraph: "Wyaaaaaa. Ruh ruh. Huwaa muaa mumwa. Wyogg, ur oh. Wua ga ma uma ahuma ooma. Ruh gwyaaaag. Youw."
+  products:
+    title: "Mauhwaa"
+    released: "Ruhhha"
+  flash:
+    login: "Wohooohaaa"
+  number:
+    format:
+      precision: 3
+      separator: '|'
+      delimiter: '-'
+    currency:
+      format:
+        unit: '$'
+        precision: 2
+        format: '%u%n'
