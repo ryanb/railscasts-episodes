@@ -1,0 +1,13 @@
+<% title "Comments" %>
+
+<p><%= link_to "&lsaquo;&lsaquo; Back to Article", @article %></p>
+
+<% if @article.comments.empty? %>
+  <p>Currently no comments.</p>
+<% else %>
+  <div id="comments">
+    <%= render :partial => @article.comments %>
+  </div>
+<% end %>
+
+<p><%= link_to "New Comment", new_article_comment_path(@article) %></p>

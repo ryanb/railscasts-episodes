@@ -1,0 +1,9 @@
+<div class="comment">
+  <strong><%= link_to_unless comment.site_url.blank?, h(comment.author_name), h(comment.site_url) %></strong>
+  <em>on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %></em>
+  <%=simple_format h(comment.content) %>
+  <p>
+    <%= link_to "Edit", edit_comment_path(comment) %> |
+    <%= link_to "Destroy", comment, :method => :delete, :confirm => "Are you sure?" %>
+  </p>
+</div>

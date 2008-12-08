@@ -1,0 +1,8 @@
+<% title @article.name %>
+
+<%= simple_format h(@article.content) %>
+
+<p>
+  <%= link_to pluralize(@article.comments.size, 'comment'), article_comments_path(@article) %> |
+  <%= link_to "Back to Articles", articles_path %>
+</p>
