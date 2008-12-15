@@ -1,0 +1,10 @@
+Railscasts Episode #140: Rails 2.2 Extras
+
+http://railscasts.com/episodes/140
+
+Console
+
+  Product.find_by_price(3) # => nil
+  Product.find_by_price!(3) # => RecordNotFound Exception
+  Product.find_last_by_price(4.99)
+  Product.all(:joins => :category, :conditions => { :categories => { :name => 'Clothing' } })
