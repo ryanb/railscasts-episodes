@@ -19,7 +19,7 @@ class Cart < ActiveRecord::Base
         "amount_#{index+1}" => item.unit_price,
         "item_name_#{index+1}" => item.product.name,
         "item_number_#{index+1}" => item.id,
-        "quantity_#{index+1}" => (item.quantity+1)
+        "quantity_#{index+1}" => item.quantity
       })
     end
     "https://www.sandbox.paypal.com/cgi-bin/webscr?"+values.map {|k,v| "#{k}=#{v}" }.join("&")
