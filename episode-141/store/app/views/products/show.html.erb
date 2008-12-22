@@ -1,0 +1,21 @@
+<% title @product.name %>
+
+<%= simple_format h(@product.description) %>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency @product.price %>
+</p>
+
+<% unless @product.category.nil? %>
+<p>
+  <strong>Category:</strong>
+  <%= link_to h(@product.category.name), @product.category %>
+</p>
+<% end %>
+
+<p>
+  <%= link_to "Edit", edit_product_path(@product) %> |
+  <%= link_to "Destroy", @product, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", products_path %>
+</p>
