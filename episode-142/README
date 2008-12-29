@@ -1,0 +1,11 @@
+Railscasts Episode #142: Paypal Notifications
+
+http://railscasts.com/episodes/142
+
+Commands
+
+  script/generate nifty_scaffold payment_notification params:text cart_id:integer status:string transaction_id:string create
+  
+  rake db:migrate
+  
+  curl -d "txn_id=3XC103945N720211C&invoice=923204115&payment_status=Completed" http://localhost:3000/payment_notifications
