@@ -1,0 +1,11 @@
+games:
+  name: Games
+
+electronics:
+  name: Electronics
+
+furniture:
+  name: Furniture
+
+groceries:
+  name: Groceries

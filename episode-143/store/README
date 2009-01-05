@@ -1,0 +1,6 @@
+Railscasts Example Store App
+--
+
+To setup the app, just run `rake setup`.
+
+You'll also need to recreate the certs directory and files as shown in the episode.

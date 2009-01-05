@@ -1,0 +1,11 @@
+Railscasts Episode #143: PayPal Security
+
+http://railscasts.com/episodes/143
+
+Commands
+
+  mkdir certs
+  cd certs
+  openssl genrsa -out app_key.pem 1024
+  openssl req -new -key app_key.pem -x509 -days 365 -out app_cert.pem
+  mv ~/Downloads/paypal_cert_pem.txt paypal_cert.pem

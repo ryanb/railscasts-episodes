@@ -1,0 +1,17 @@
+development:
+  paypal_email: seller_1229899173_biz@railscasts.com
+  paypal_secret: foobar
+  paypal_cert_id: WKKX2FSCFDB8C
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+
+test:
+  paypal_email: test@example.com
+  paypal_secret: testsecret
+  paypal_cert_id: 123456789
+  paypal_url: testpaypalurl
+
+production:
+  paypal_email: foo@example.com
+  paypal_secret: supersecret
+  paypal_cert_id: KLHZSK326HEDS
+  paypal_url: "https://www.paypal.com/cgi-bin/webscr"
