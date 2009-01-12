@@ -1,0 +1,7 @@
+Railscasts Episode #144: Active Merchant Basics
+
+http://railscasts.com/episodes/144
+
+Commands
+
+  sudo gem install activemerchant
