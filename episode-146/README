@@ -1,0 +1,8 @@
+Railscasts Episode #146: PayPal Express Checkout
+
+http://railscasts.com/episodes/146
+
+Commands
+
+  script/generate migration add_express_token_to_orders express_token:string express_payer_id:string
+  rake db:migrate
