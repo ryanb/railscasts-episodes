@@ -1,0 +1,11 @@
+Railscasts Episode #147: Sortable Lists
+
+http://railscasts.com/episodes/147
+
+Commands
+  
+  script/generate migration add_position_to_faqs position:integer
+  
+  rake db:migrate
+  
+  script/plugin install git://github.com/rails/acts_as_list.git

@@ -1,0 +1,12 @@
+<% form_for @faq do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :question %><br />
+    <%= f.text_area :question %>
+  </p>
+  <p>
+    <%= f.label :answer %><br />
+    <%= f.text_area :answer %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

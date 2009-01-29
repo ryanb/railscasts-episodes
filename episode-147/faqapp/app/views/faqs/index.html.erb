@@ -1,0 +1,13 @@
+<% title "FAQs" %>
+
+<ul id="faqs">
+<% for faq in @faqs %>
+  <% content_tag_for :li, faq do %>
+    <span class="handle">[drag]</span>
+    <%= link_to h(faq.question), faq %>
+  <% end %>
+<% end %>
+</ul>
+<%= sortable_element("faqs", :url => sort_faqs_path, :handle => "handle") %>
+
+<p><%= link_to "New FAQ", new_faq_path %></p>
