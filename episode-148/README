@@ -1,0 +1,10 @@
+Railscasts Episode #148: App Templates in Rails 2.3
+
+http://railscasts.com/episodes/148
+
+Commands
+
+  sudo gem install rails --source http://gems.rubyonrails.org
+  rails -v
+  rails store -m base_template.rb
+  rails store -m auth_template.rb
