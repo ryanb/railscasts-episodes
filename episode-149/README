@@ -1,0 +1,17 @@
+Railscasts Episode #149: Rails Engines
+
+http://railscasts.com/episodes/149
+
+Commands
+
+  gem install rails --source http://gems.rubyonrails.org
+  rails -v
+  script/generate plugin blogify
+  cd vendor/plugins/blogify
+  cp -R ~/code/blog/app .
+  mkdir config
+  cp ~/code/blog/config/routes.rb config
+  mkdir db
+  cp -R ~/code/blog/db/migrate db
+  rake db:migrate
+  rake blogify:sync
