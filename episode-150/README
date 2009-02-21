@@ -1,0 +1,10 @@
+Railscasts Episode #150: Rails Metal
+
+http://railscasts.com/episodes/150
+
+Commands
+
+  script/generate metal processes_list
+  script/server -e production -d
+  ab -n 100 http://127.0.0.1:3000/processes/list
+  ab -n 100 http://127.0.0.1:3000/processes_list

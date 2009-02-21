@@ -1,0 +1,5 @@
+<% title "Processes List" %>
+
+<pre id="processes">Gathering processes...</pre>
+
+<%= periodically_call_remote :url => "/processes_list", :update => "processes", :frequency => 3, :method => :get %>
