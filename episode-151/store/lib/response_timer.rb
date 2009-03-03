@@ -5,6 +5,10 @@ class ResponseTimer
   end
   
   def call(env)
+    dup._call(env)
+  end
+  
+  def _call(env)
     @start = Time.now
     @status, @headers, @response = @app.call(env)
     @stop = Time.now
