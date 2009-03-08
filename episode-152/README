@@ -1,0 +1,30 @@
+Railscasts Episode #152: Rails 2.3 Extras
+
+http://railscasts.com/episodes/152
+
+Commands
+
+  gem install rails --source http://gems.rubyonrails.org
+
+
+Console
+
+  # find in batches
+  Product.count
+  Product.find_in_batches(:batch_size => 10) do |batch|
+    puts "Products in batch: #{batch.size}"
+  end
+  Product.each(:batch_size => 10) do |product|
+    puts product.name
+  end
+  
+  # scoped_by
+  Product.scoped_by_price(4.99).size
+  Product.scoped_by_price(4.99).first
+  Product.scoped_by_price(4.99).scoped_by_category_id(3).first
+
+  # try method
+  Product.find_by_price(4.99).name
+  Product.find_by_price(4.95).name
+  Product.find_by_price(4.95).try(:name)
+  Product.find_by_price(4.99).try(:name)
