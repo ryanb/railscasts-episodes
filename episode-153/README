@@ -1,0 +1,8 @@
+Railscasts Episode #153: PDFs with Prawn
+
+http://railscasts.com/episodes/153
+
+Commands
+
+  sudo gem install prawn
+  script/plugin install git://github.com/thorny-sun/prawnto.git

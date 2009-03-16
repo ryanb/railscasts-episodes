@@ -1,0 +1,5 @@
+dvdplayer:
+  unit_price: 79.95
+  product: dvdplayer
+  cart: purchased
+  quantity: 2
