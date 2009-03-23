@@ -1,0 +1,20 @@
+<% title "Comments" %>
+
+<div id="comments">
+<% for comment in @comments %>
+  <div class="comment">
+    <%=simple_format comment.content %>
+  </div>
+<% end %>
+</div>
+
+
+<h2>New Comment</h2>
+
+<% form_for [@commentable, Comment.new] do |f| %>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

@@ -1,0 +1,20 @@
+<% form_for @event do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :starts_at %><br />
+    <%= f.datetime_select :starts_at %>
+  </p>
+  <p>
+    <%= f.label :ends_at %><br />
+    <%= f.datetime_select :ends_at %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

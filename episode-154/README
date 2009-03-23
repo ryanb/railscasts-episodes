@@ -1,0 +1,8 @@
+Railscasts Episode #154: Polymorphic Association
+
+http://railscasts.com/episodes/154
+
+Commands
+
+  script/generate nifty_scaffold comment content:text commentable_id:integer commentable_type:string
+  rake db:migrate

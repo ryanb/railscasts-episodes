@@ -1,0 +1,4 @@
+tmp/*
+log/*
+*.sqlite3
+public/assets/*

@@ -1,0 +1,11 @@
+<% title "Events" %>
+
+<% for event in @events %>
+  <div class="event">
+    <h3><%=h event.name %></h3>
+    <div class="date">From <%= event.starts_at.strftime("%B %d, %Y") %> to <%= event.ends_at.strftime("%B %d, %Y") %></div>
+    <div><%=h event.description %></div>
+  </div>
+<% end %>
+
+<p><%= link_to "New Event", new_event_path %></p>

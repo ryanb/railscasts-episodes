@@ -1,0 +1,12 @@
+<% title "Photo" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @photo.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_photo_path(@photo) %> |
+  <%= link_to "Destroy", @photo, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", photos_path %>
+</p>

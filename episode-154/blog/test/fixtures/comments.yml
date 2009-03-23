@@ -1,0 +1,9 @@
+one:
+  content: MyText
+  commentable_id: 1
+  commentable_type: MyString
+
+two:
+  content: MyText
+  commentable_id: 1
+  commentable_type: MyString
