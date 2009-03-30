@@ -1,0 +1,6 @@
+<%= flash[:notice] %>
+<% for article in @articles %>
+  <p><%=h article.title %></p>
+  <p><%=h article.content %></p>
+<% end %>
+<p><%= link_to "New Article", new_article_path %></p>

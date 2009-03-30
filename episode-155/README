@@ -1,0 +1,14 @@
+Railscasts Episode #155: Beginning with Cucumber
+
+http://railscasts.com/episodes/155
+
+Commands
+
+  rails blog
+  sudo rake gems:install RAILS_ENV=test
+  script/generate cucumber
+  cucumber features -n
+  script/generate rspec_model article title:string content:text
+  rake db:migrate
+  rake db:test:clone
+  script/generate rspec_controller articles index
