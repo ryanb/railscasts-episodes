@@ -1,0 +1,11 @@
+Railscasts Episode #156: Webrat
+
+http://railscasts.com/episodes/156
+
+Commands
+  
+  sudo rake gems:install RAILS_ENV=test
+  script/generate integration_test authentication
+  rake test:integration
+  script/generate nifty_authentication
+  rake db:migrate
