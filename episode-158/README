@@ -1,0 +1,7 @@
+Railscasts Episode #158: Factory Girl
+
+http://railscasts.com/episodes/158
+
+Commands
+  sudo rake gems:install RAILS_ENV=test
+  rake spec
