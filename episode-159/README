@@ -1,0 +1,10 @@
+Railscasts Episode #159: More on Cucumber
+
+http://railscasts.com/episodes/159
+
+Commands
+  
+  sudo rake gems:install RAILS_ENV=test
+  cucumber features -n
+  cucumber features -n -t focus
+  cucumber features -n -t \~focus
