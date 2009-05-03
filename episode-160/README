@@ -1,0 +1,11 @@
+Railscasts Episode #160: Authlogic
+
+http://railscasts.com/episodes/160
+
+
+Commands
+  sudo rake gems:install
+  script/generate nifty_scaffold user username:string email:string password:string new edit
+  rake db:migrate
+  script/generate session user_session
+  script/generate nifty_scaffold user_session --skip-model username:string password:string new destroy
