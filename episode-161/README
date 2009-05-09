@@ -1,0 +1,17 @@
+Railscasts Episode #161: Three Profiling Tools
+
+http://railscasts.com/episodes/161
+
+Commands
+
+  script/plugin install http://newrelic.rubyforge.org/svn/newrelic_rpm
+  sudo rake gems:install
+  script/server
+  script/plugin install git://github.com/brynary/rack-bug.git
+  mate config/initializers/middleware.rb
+
+--
+
+You can find the Rails application used in this screencast at:
+
+http://github.com/ryanb/railscasts/tree/master
