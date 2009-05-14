@@ -1,0 +1,9 @@
+one:
+  parent_id: 1
+  name: MyString
+  content: MyText
+
+two:
+  parent_id: 1
+  name: MyString
+  content: MyText

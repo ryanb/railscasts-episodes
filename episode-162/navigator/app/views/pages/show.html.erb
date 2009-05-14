@@ -1,0 +1,25 @@
+<% title @page.name, false %>
+
+<% unless @page.children.empty? %>
+<ul id="submenu">
+  <% for page in @page.children %>
+    <li><%= link_to h(page.name), page %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<p>
+<% for page in @page.ancestors.reverse %>
+  <%= link_to h(page.name), page %> &gt;
+<% end %>
+</p>
+
+<h1><%=h @page.name %></h1>
+
+<%= simple_format @page.content %>
+
+<p>
+  <%= link_to "Edit", edit_page_path(@page) %> |
+  <%= link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", pages_path %>
+</p>

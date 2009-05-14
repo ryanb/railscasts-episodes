@@ -1,0 +1,16 @@
+<% form_for @page do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :parent_id %><br />
+    <%= f.collection_select :parent_id, Page.all(:order => "name"), :id, :name, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
