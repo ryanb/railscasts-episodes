@@ -1,3 +1,10 @@
 Railscasts Episode #162: Tree Based Navigation
 
 http://railscasts.com/episodes/162
+
+Commands
+
+  rails navigator
+  script/plugin install git://github.com/rails/acts_as_tree.git
+  script/generate nifty_layout
+  script/generate nifty_scaffold page parent_id:integer name:string content:text
