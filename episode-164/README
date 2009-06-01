@@ -1,3 +1,12 @@
 Railscasts Episode #164: Cron in Ruby
 
 http://railscasts.com/episodes/164
+
+Commands
+
+  crontab -e
+  crontab -l
+  sudo rake gems:install
+  wheneverize .
+  whenever --update-crontab store
+  
