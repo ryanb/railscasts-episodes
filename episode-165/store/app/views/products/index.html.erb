@@ -1,0 +1,25 @@
+<% title "Products" %>
+
+<% form_tag edit_multiple_products_path do %>
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+  </tr>
+<% for product in @products %>
+  <tr>
+    <td><%= check_box_tag "product_ids[]", product.id %></td>
+    <td><%=h product.name %></td>
+    <td><%=h product.category.name %></td>
+    <td><%= number_to_currency product.price %></td>
+    <td><%= link_to "Edit", edit_product_path(product) %></td>
+    <td><%= link_to "Destroy", product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= submit_tag "Edit Checked" %>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>
