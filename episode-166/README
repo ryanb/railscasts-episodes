@@ -1,0 +1,19 @@
+Railscasts Episode #166: Touch and Cache
+
+http://railscasts.com/episodes/166
+
+script/console
+
+  a = Article.first
+  a.updated_at
+  a.update_attributes(:author_name => "Ryan")
+  a.updated_at
+  a.touch
+  a.updated_at
+  a.cache_key
+  a.touch
+  a.cache_key
+  c = Comment.first
+  c.update_attributes(:author_name => "Joe")
+  c.updated_at
+  c.article.updated_at
