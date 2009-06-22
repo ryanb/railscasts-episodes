@@ -1,0 +1,9 @@
+Railscasts Episode #167: More on Virtual Attributes
+
+http://railscasts.com/episodes/167
+
+Commands
+
+  script/generate model tag name:string
+  script/generate model tagging article_id:integer tag_id:integer
+  rake db:migrate
