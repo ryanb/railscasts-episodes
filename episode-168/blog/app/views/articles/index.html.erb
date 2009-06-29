@@ -1,0 +1,21 @@
+<% title "Articles" %>
+
+<div id="recent_episodes">
+  <h3>Recent Railscasts Episodes</h3>
+  <ul>
+  <% for entry in FeedEntry.all(:limit => 10, :order => "published_at desc") %>
+    <li><%= link_to h(entry.name), entry.url %></li>
+  <% end %>
+  </ul>
+</div>
+
+<div id="articles">
+<% for article in @articles %>
+  <h2>
+    <%= link_to h(article.name), article %>
+    <span class="comments">(<%= pluralize(article.comments.size, 'comment') %>)</span>
+  </h2>
+  <div class="author">from <%=h article.author_name %> on <%= article.created_at.strftime('%b %d, %Y') %></div>
+  <div class="content"><%= simple_format(article.content) %></div>
+<% end %>
+</div>

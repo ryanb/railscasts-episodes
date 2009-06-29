@@ -1,0 +1,12 @@
+Railscasts Episode #168: Feed Parsing
+
+http://railscasts.com/episodes/168
+
+Commands
+  sudo gem install pauldix-feedzirra
+  script/generate model feed_entry name:string summary:text url:string published_at:datetime guid:string
+  rake db:migrate
+
+Console
+  FeedEntry.update_from_feed("http://feeds.feedburner.com/railscasts")
+  FeedEntry.count
