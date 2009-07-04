@@ -1,0 +1,18 @@
+<% title "Piano Forums" %>
+<% javascript "jquery", "/users/current" %>
+<% @hide_dynamic = true %>
+
+<div id="forums">
+  <% for forum in @forums %>
+    <div class="forum">
+      <h2><%= link_to h(forum.name), forum %></h2>
+      <p><%=h forum.description %></p>
+      <p class="admin" style="display:none">
+        <%= link_to "Edit", edit_forum_path(forum) %> |
+        <%= link_to "Destroy", forum, :confirm => 'Are you sure?', :method => :delete %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<p class="admin" style="display:none"><%= link_to "New Forum", new_forum_path %></p>

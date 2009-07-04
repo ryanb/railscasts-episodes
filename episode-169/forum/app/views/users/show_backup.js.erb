@@ -1,0 +1,7 @@
+$(document).ready(function() {
+  $("#user_status").html('<%= escape_javascript(render(:partial => "layouts/user_status")) %>');
+  $("#flash_message").html('<%= escape_javascript(render(:partial => "layouts/flash_message")) %>');
+  <% if admin? %>
+    $(".admin").show();
+  <% end %>
+});

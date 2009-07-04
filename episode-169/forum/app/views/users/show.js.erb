@@ -1,0 +1,6 @@
+$(document).ready(function() {
+  $("#container").prepend('<%=escape_javascript render("layouts/dynamic_header") %>');
+  <% if admin? %>
+    $(".admin").show();
+  <% end %>
+});

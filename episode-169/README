@@ -1,0 +1,7 @@
+Railscasts Episode #169: Dynamic Page Caching
+
+http://railscasts.com/episodes/169
+
+Commands
+
+  rm public/index.html.erb
