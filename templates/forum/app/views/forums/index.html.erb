@@ -1,0 +1,20 @@
+<% title "Piano Forums" %>
+
+<div id="forums">
+  <% for forum in @forums %>
+    <div class="forum">
+      <h2><%= link_to h(forum.name), forum %></h2>
+      <p><%=h forum.description %></p>
+      <% if admin? %>
+        <p>
+          <%= link_to "Edit", edit_forum_path(forum) %> |
+          <%= link_to "Destroy", forum, :confirm => 'Are you sure?', :method => :delete %>
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<% if admin? %>
+  <p><%= link_to "New Forum", new_forum_path %></p>
+<% end %>
