@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <div id="user_nav">
+        <% if current_user %>
+          <%= link_to "Edit Profile", edit_user_path(:current) %> |
+          <%= link_to "Logout", logout_path %>
+        <% else %>
+          <%= link_to "Register", new_user_path %> |
+          <%= link_to "Login", login_path %>
+        <% end %>
+      </div>
+      
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <%- if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <%- end -%>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

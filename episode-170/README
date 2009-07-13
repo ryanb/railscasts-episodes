@@ -1,0 +1,11 @@
+Railscasts Episode #170: OpenID with Authlogic
+
+http://railscasts.com/episodes/170
+
+Commands
+
+  sudo gem install ruby-openid authlogic-oid
+  script/plugin install git://github.com/rails/open_id_authentication.git
+  rake open_id_authentication:db:create
+  script/generate migration add_openid_identifier_to_users openid_identifier:string
+  rake db:migrate
