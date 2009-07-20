@@ -1,3 +1,9 @@
 Railscasts Episode #171: Delayed Job
 
 http://railscasts.com/episodes/171
+
+Commands
+  script/plugin install git://github.com/collectiveidea/delayed_job.git
+  script/generate delayed_job
+  rake db:migrate
+  rake jobs:work
