@@ -1,0 +1,11 @@
+Railscasts Episode #172: Touch and Cache
+
+http://railscasts.com/episodes/172
+
+script/console
+
+  a = Article.first
+  a.cache_key
+  a.updated_at
+  a.touch
+  a.updated_at
