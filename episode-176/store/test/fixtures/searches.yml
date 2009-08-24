@@ -1,0 +1,11 @@
+one:
+  keywords: MyString
+  category_id: 1
+  minimum_price: 1.5
+  maximum_price: 1.5
+
+two:
+  keywords: MyString
+  category_id: 1
+  minimum_price: 1.5
+  maximum_price: 1.5

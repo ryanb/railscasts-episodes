@@ -1,0 +1,24 @@
+Railscasts Episode #176: Searchlogic
+
+http://railscasts.com/episodes/176
+
+Commands
+
+  sudo gem install searchlogic
+
+script/console
+
+  Product.all
+  Product.name_like("Video")
+  Product.name_not_like("Video")
+  Product.name_not_like("Video").price_gt(5)
+  Product.name_not_like("Video").price_gt(5).price_lt(200)
+  Product.name_like_any(["couch", "table"])
+  Product.name_like_all(["video", "console"])
+  Category.all
+  Product.category_name_like("elect")
+  Product.search(:category_name_like => "elect", :price_lt => "100")
+  s = _
+  s.all
+  s.name_like("video")
+  Product.ascend_by_name
