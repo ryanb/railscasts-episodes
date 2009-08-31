@@ -1,0 +1,16 @@
+<% title @page.name %>
+
+<p>
+  <%= simple_format wiki_link(h(@page.content)) %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_page_path(@page) %>
+  | Version <%= @page.version %>
+  <% if @page.version > 1 %>
+    | <%= link_to "Previous version", :version => @page.version-1 %>
+  <% end %>
+  <% if params[:version] %>
+    | <%= link_to "Latest version", :version => nil %>
+  <% end %>
+</p>

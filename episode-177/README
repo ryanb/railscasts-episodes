@@ -1,0 +1,18 @@
+Railscasts Episode #177: Model Versioning
+
+http://railscasts.com/episodes/177
+
+Commands
+  
+  sudo rake gems:install
+  script/generate vestal_versions_migration
+  script/generate migration version_existing_pages
+  rake db:migrate
+
+script/console
+
+  p = Page.all
+  p.versions
+  p.revert_to(7.minutes.ago)
+  p.content
+  p.revert_to(:last)

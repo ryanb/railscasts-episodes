@@ -1,0 +1,9 @@
+<% title @page.name %>
+
+<p>
+  <%= simple_format wiki_link(h(@page.content)) %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_page_path(@page) %>
+</p>
