@@ -1,0 +1,19 @@
+<% title @project.name %>
+
+<%= image_tag @project.photo.url %>
+
+<h2>Tasks</h2>
+<ul>
+  <% for task in @project.tasks %>
+    <li>
+      <%=h task.name %>
+      (<%= link_to "Edit", edit_project_task_path(@project, task) %> |
+      <%= link_to "Destroy", [@project, task], :confirm => "Are you sure?", :method => :delete %>)
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "New Task", new_project_task_path(@project) %> |
+  <%= link_to "View All Projects", projects_path %>
+</p>

@@ -1,0 +1,9 @@
+Railscasts Episode #178: 7 Security Tips
+
+http://railscasts.com/episodes/178
+
+script/console
+
+  p = Project.find(2)
+  p.update_attributes(:task_ids => [4])
+  p.tasks
