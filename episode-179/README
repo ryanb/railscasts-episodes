@@ -1,0 +1,10 @@
+Railscasts Episode #179: Seed Data
+
+http://railscasts.com/episodes/179
+
+Commands
+
+  script/generate model operating_system name:string
+  script/generate model country name:string code:string
+  rake db:migrate
+  rake db:seed

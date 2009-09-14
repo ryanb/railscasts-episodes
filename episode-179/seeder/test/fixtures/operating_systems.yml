@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+windows:
+  name: Windows
+
+mac:
+  name: Mac OS X
+
+linux:
+  name: Linux
