@@ -1,0 +1,13 @@
+Railscasts Episode #181: Include vs Joins
+
+http://railscasts.com/episodes/181
+
+script/console
+
+  c = Comment.all(:joins => :user, :conditions => { :users => { :admin => true } })
+  c.first.users
+  c = Comment.all(:include => :user, :conditions => { :users => { :admin => true } })
+  c.first.users
+  User.all(:joins => :comments, :select => "users.*, count(comments.id) as comments_count", :group => "users.id")
+  g = Group.first
+  Comment.all(:joins => {:user => :memberships}, :conditions => { :memberships => { :group_id => g.id } })

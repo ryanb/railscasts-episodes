@@ -1,0 +1,15 @@
+<% title "Users" %>
+
+<% for user in @users %>
+<p class="user">
+  <strong><%= link_to h(user.name), user %></strong>
+  <%= "(admin)" if user.admin? %><br />
+  
+  <%= pluralize user.comments_count, "comment" %><br />
+  
+  <%= link_to "Edit", edit_user_path(user) %> |
+  <%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %>
+</p>
+<% end %>
+
+<p><%= link_to "New User", new_user_path %></p>

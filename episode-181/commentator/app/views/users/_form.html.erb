@@ -1,0 +1,18 @@
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.check_box :admin %> <%= f.label :admin %>
+  </p>
+  <p>
+  <% for group in Group.all %>
+    <%= check_box_tag "user[group_ids][]", group.id, @user.groups.include?(group) %>
+    <%=h group.name %><br />
+  <% end %>
+  </p>
+  <%= hidden_field_tag "user[group_ids][]", "" %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

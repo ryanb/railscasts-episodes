@@ -1,0 +1,18 @@
+<% title @group.name %>
+
+<p>
+  <%= link_to "Edit", edit_group_path(@group) %> |
+  <%= link_to "Destroy", @group, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "See All Groups", groups_path %>
+</p>
+
+<h2>Users</h2>
+<ul>
+<% for user in @group.users %>
+  <li><%=h user.name %></li>
+<% end %>
+</ul>
+
+<h2>Comments</h2>
+
+<%= render @group.comments %>

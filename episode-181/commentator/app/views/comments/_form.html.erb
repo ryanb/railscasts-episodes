@@ -1,0 +1,12 @@
+<% form_for @comment do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

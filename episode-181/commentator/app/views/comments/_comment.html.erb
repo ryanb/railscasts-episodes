@@ -1,0 +1,7 @@
+<div class="comment">
+  <%= simple_format comment.content %>
+  <p class="actions">
+    <%= link_to "edit", edit_comment_path(comment) %> |
+    <%= link_to "destroy", comment, :method => :delete, :confirm => "Are you sure?" %>
+  </p>
+</div>
