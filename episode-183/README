@@ -1,0 +1,16 @@
+Railscasts Episode #183: Gemcutter & Jeweler
+
+http://railscasts.com/episodes/183
+
+Commands
+
+  sudo gem update --system
+  sudo gem install gemcutter
+  gem tumble
+  gem build uniquify.gemspec
+  gem push uniquify-0.1.0.gem
+  sudo gem install jeweler
+  rake --tasks
+  rake version:write
+  rake version:bump:minor
+  rake gemcutter:release
