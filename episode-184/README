@@ -1,0 +1,13 @@
+Railscasts Episode #184: Formtastic Part 1
+
+http://railscasts.com/episodes/184
+
+Commands
+
+  rails vet
+  sudo rake gems:install
+  script/generate nifty_layout
+  script/generate nifty_scaffold category name:string description:text
+  rake db:migrate
+  script/generate formtastic_stylesheets
+  script/generate nifty_scaffold animal name:string category_id:integer born_on:date female:boolean

@@ -1,0 +1,64 @@
+Validation Reflection
+=====================
+
+Version 0.3.1, 2008-01-03
+
+This plugin adds reflective access to validations
+
+ - ModelClass.reflect_on_all_validations
+ - ModelClass.reflect_on_validations_for(:property)
+
+Both of these methods return arrays containing instances of
+ActiveRecord::Reflection::MacroReflection. For example
+
+  class Person < ActiveRecord::Base
+    validates_presence_of :name
+    validates_numericality_of :size, :only_integer => true
+  end
+
+  refl = Person.reflect_on_validations_for(:name)
+  refl[0].macro
+  # => :validates_presence_of
+  
+  refl = Person.reflect_on_validations_for(:size)
+  refl[0].macro
+  # => :validates_numericality_of
+  refl[0].options
+  # => { :only_integer => true }
+  
+
+== Customization
+
+Usually, all the standard Rails validations are reflected.
+You can change this -- add or remove validations -- in an
+application-specific configuration file, 
+
+  config/plugins/validation_reflection.rb
+
+In that file change config.reflected_validations to suit your
+needs. Say, you have a custom validation for email addresses,
+validates_as_email, then you could add it like this
+
+  config.reflected_validations << :validates_as_email
+
+If validates_as_email is implemented in terms of other validation
+methods, these validations are added to the reflection metadata,
+too. As that may not be what you want, you can disable reflection
+for these subordinate validations
+
+  config.reflected_validations << {
+  	:method => :validates_as_email,
+  	:ignore_subvalidations => true
+  }
+
+You have to make sure that all reflected validations are defined
+before this plugin is loaded. To this end, you may have to
+explicitly set the load order of plugins somewhere in the environment
+configuration using
+
+  config.plugins = [...]
+
+
+
+
+Copyright (c) 2006-2008, Michael Schuerig, michael@schuerig.de

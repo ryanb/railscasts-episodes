@@ -1,0 +1,23 @@
+<% title "Animals" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Born On</th>
+    <th>Female</th>
+  </tr>
+  <% for animal in @animals %>
+    <tr>
+      <td><%=h animal.name %></td>
+      <td><%=h animal.category_id %></td>
+      <td><%=h animal.born_on %></td>
+      <td><%=h animal.female %></td>
+      <td><%= link_to "Show", animal %></td>
+      <td><%= link_to "Edit", edit_animal_path(animal) %></td>
+      <td><%= link_to "Destroy", animal, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Animal", new_animal_path %></p>
