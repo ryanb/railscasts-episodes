@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  category_id: 1
+  born_on: 2009-10-03
+  female: false
+
+two:
+  name: MyString
+  category_id: 1
+  born_on: 2009-10-03
+  female: false

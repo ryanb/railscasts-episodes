@@ -1,0 +1,17 @@
+<% title "Problems" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for problem in @problems %>
+    <tr>
+      <td><%=h problem.name %></td>
+      <td><%= link_to "Show", problem %></td>
+      <td><%= link_to "Edit", edit_problem_path(problem) %></td>
+      <td><%= link_to "Destroy", problem, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Problem", new_problem_path %></p>

@@ -1,0 +1,1 @@
+Formtastic::SemanticFormBuilder.inline_errors = :none

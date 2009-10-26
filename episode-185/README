@@ -1,0 +1,9 @@
+Railscasts Episode #185: Formtastic Part 2
+
+http://railscasts.com/episodes/185
+
+Commands
+
+  script/generate nifty_scaffold problem name:string
+  rake db:migrate
+  script/generate nifty_scaffold symptom animal_id:integer problem_id:integer --skip-controller

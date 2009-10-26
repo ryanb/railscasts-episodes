@@ -1,0 +1,24 @@
+<% title "Animal" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @animal.name %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%=h @animal.category_id %>
+</p>
+<p>
+  <strong>Born On:</strong>
+  <%=h @animal.born_on %>
+</p>
+<p>
+  <strong>Female:</strong>
+  <%=h @animal.female %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_animal_path(@animal) %> |
+  <%= link_to "Destroy", @animal, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", animals_path %>
+</p>

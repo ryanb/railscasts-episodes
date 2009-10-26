@@ -1,0 +1,11 @@
+<% semantic_form_for @animal do |f| %>
+  <%= f.error_messages %>
+  <% f.inputs do %>
+    <%= f.input :name, :hint => "Use the owner's name if none is provided" %>
+    <%= f.input :born_on, :start_year => 1900 %>
+    <%= f.input :category, :include_blank => false %>
+    <%= f.input :female, :as => :radio, :label => "Gender", :collection => [["Male", false], ["Female", true]] %>
+    <%= f.input :problems, :as => :check_boxes, :required => false %>
+  <% end %>
+  <%= f.buttons %>
+<% end %>
