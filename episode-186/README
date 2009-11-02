@@ -1,0 +1,15 @@
+Railscasts Episode #186: Pickle with Cucumber
+
+http://railscasts.com/episodes/186
+
+Commands
+
+  rails store
+  sudo rake gems:install RAILS_ENV=test
+  script/generate cucumber
+  script/generate pickle
+  script/generate rspec_model product name:string price:decimal
+  rake db:migrate
+  rake db:test:clone
+  script/generate rspec_controller products show
+  cucumber features -q

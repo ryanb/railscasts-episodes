@@ -1,0 +1,8 @@
+<table id="products">
+<% for product in @products %>
+  <tr>
+    <td><%= link_to h(product.name), product %></td>
+    <td><%= number_to_currency product.price %></td>
+  </tr>
+<% end %>
+</table>
