@@ -1,0 +1,8 @@
+Railscasts Episode #187: Testing Exceptions
+
+http://railscasts.com/episodes/187
+
+Commands
+
+  script/generate integration_test exceptions
+  rake test:integration
