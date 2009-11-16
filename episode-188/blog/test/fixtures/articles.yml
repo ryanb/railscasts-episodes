@@ -1,0 +1,17 @@
+piano:
+  name: The Piano, a Marvelous Instrument
+  content: The piano is a musical instrument played by means of a keyboard that produces sound by striking steel strings with felt hammers. The hammers immediately rebound allowing the strings to continue vibrating at their resonant frequency. These vibrations are transmitted through a bridge to a soundboard that amplifies them.
+  author_name: Chuck Bacon
+  created_at: 2008-07-19
+
+music:
+  name: What is Music
+  content: Music is an art form in which the medium is sound organized in time. Common elements of music are pitch (which governs melody and harmony), rhythm (and its associated concepts tempo, meter, and articulation), dynamics, and the sonic qualities of timbre and texture. The word derives from Greek μουσική (mousike), "(art) of the Muses".
+  author_name: Steve Black
+  created_at: 2008-07-14
+
+musical_instruments:
+  name: Many Musical Instruments
+  content: A musical instrument is a device constructed or modified for the purpose of making music. In principle, anything that produces sound can serve as a musical instrument. The term "musical instrument", however, is generally reserved for items that have a specific musical purpose such as a piano. The academic study of musical instruments is called organology.
+  author_name: Jacob Sanders
+  created_at: 2008-07-16

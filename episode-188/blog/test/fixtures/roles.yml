@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  authorizable_type: MyString
+  authorizable_id: 1
+
+two:
+  name: MyString
+  authorizable_type: MyString
+  authorizable_id: 1
