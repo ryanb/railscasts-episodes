@@ -1,0 +1,9 @@
+Railscasts Episode #189: Embedded Association
+
+http://railscasts.com/episodes/189
+
+Commands
+
+  script/generate migration add_role_to_users role:string
+  script/generate migration add_roles_mask_to_users roles_mask:integer
+  rake db:migrate
