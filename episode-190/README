@@ -1,0 +1,7 @@
+Railscasts Episode #190: Screen Scraping with Nokogiri
+
+http://railscasts.com/episodes/190
+
+Commands
+
+  sudo gem install nokogiri -- --with-xml2-include=/usr/local/include/libxml2 --with-xml2-lib=/usr/local/lib
