@@ -1,0 +1,22 @@
+Railscasts Episode #191: Mechanize
+
+http://railscasts.com/episodes/191
+
+Commands
+
+  sudo gem install mechanize
+  script/console
+  require 'mechanize'
+  agent = WWW::Mechanize.new
+  agent.get("http://railscasts.tadalist.com/session/new")
+  agent.page.forms
+  form = agent.page.forms.first
+  form.password = "secret"
+  form.submit
+  agent.page.links
+  agent.page.links.first.text
+  agent.page.link_with(:text => "Wish List")
+  agent.page.link_with(:text => "Wish List").click
+  agent.page.search(".edit_item")
+  agent.page.search(".edit_item").map(&:text).map(&:strip)
+  puts Readline::HISTORY.entries.split("exit").last[0..-2].join("\n")
