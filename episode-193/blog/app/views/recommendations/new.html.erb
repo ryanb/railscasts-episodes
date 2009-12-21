@@ -1,0 +1,21 @@
+<% title "New Recommendation" %>
+
+<% form_for @recommendation do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :article_id %>
+  <p>
+    <%= f.label :from_email %><br />
+    <%= f.text_field :from_email %>
+  </p>
+  <p>
+    <%= f.label :to_email %><br />
+    <%= f.text_field :to_email %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_area :message %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
+
+

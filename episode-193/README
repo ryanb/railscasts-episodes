@@ -1,0 +1,10 @@
+Railscasts Episode #193: Tableless Model
+
+http://railscasts.com/episodes/193
+
+Commands
+
+  script/generate nifty_scaffold recommendation from_email:string to_email:string article_id:integer message:text new create
+  rake db:migrate
+  rake db:rollback
+  rm db/migrate/*_recommendations.rb

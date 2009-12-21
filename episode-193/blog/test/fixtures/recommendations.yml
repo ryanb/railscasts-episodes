@@ -1,0 +1,11 @@
+one:
+  from_email: MyString
+  to_email: MyString
+  article_id: 1
+  message: MyText
+
+two:
+  from_email: MyString
+  to_email: MyString
+  article_id: 1
+  message: MyText
