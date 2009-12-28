@@ -1,0 +1,11 @@
+Railscasts Episode #194: MongoMapper Basics
+
+http://railscasts.com/episodes/194
+
+script/console
+
+  Project.all
+  Project.all(:order => "name")
+  Project.all(:priority => 3)
+  Project.all(:priority.gte => 2)
+  Project.all(:priority.in => [2, 3])

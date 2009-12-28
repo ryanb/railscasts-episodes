@@ -1,0 +1,16 @@
+<% form_for @task do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :project_id %><br />
+    <%= f.collection_select :project_id, Project.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :completed %><br />
+    <%= f.check_box :completed %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

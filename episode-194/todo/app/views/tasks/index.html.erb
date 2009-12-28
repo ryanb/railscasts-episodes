@@ -1,0 +1,21 @@
+<% title "Tasks" %>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Name</th>
+    <th>Completed</th>
+  </tr>
+  <% for task in @tasks %>
+    <tr>
+      <td><%=h task.project_id %></td>
+      <td><%=h task.name %></td>
+      <td><%=h task.completed %></td>
+      <td><%= link_to "Show", task %></td>
+      <td><%= link_to "Edit", edit_task_path(task) %></td>
+      <td><%= link_to "Destroy", task, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Task", new_task_path %></p>
