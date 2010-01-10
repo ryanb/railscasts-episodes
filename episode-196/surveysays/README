@@ -1,0 +1,4 @@
+Example application for Railscasts. To get started:
+
+  rake db:migrate
+  script/server

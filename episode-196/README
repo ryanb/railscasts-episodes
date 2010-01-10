@@ -1,0 +1,12 @@
+Railscasts Episode #196: Nested Fields Part 1
+
+http://railscasts.com/episodes/196
+
+Commands
+
+  rails surveysays
+  script/generate nifty_layout
+  script/generate nifty_scaffold survey name:string
+  script/generate model question survey_id:integer content:text
+  script/generate model answer question_id:integer content:string
+  rake db:migrate
