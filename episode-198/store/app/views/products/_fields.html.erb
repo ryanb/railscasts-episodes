@@ -1,0 +1,25 @@
+<%= f.error_messages :object_name => "product" %>
+<% if params[:field].blank? || params[:field] == "name" %>
+<p>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</p>
+<% end %>
+<% if params[:field].blank? || params[:field] == "price" %>
+<p>
+  <%= f.label :price %><br />
+  <%= f.text_field :price %>
+</p>
+<% end %>
+<% if params[:field].blank? || params[:field] == "category_id" %>
+<p>
+  <%= f.label :category_id %><br />
+  <%= f.collection_select :category_id, Category.all, :id, :name %>
+</p>
+<% end %>
+<% if params[:field].blank? || params[:field] == "discontinued" %>
+<p>
+  <%= f.check_box :discontinued %>
+  <%= f.label :discontinued %>
+</p>
+<% end %>

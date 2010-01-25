@@ -1,0 +1,11 @@
+<% title "Edit Products" %>
+
+<% form_tag update_individual_products_path, :method => :put do %>
+  <% for product in @products %>
+    <% fields_for "products[]", product do |f| %>
+      <h2><%=h product.name %></h2>
+      <%= render "fields", :f => f %>
+    <% end %>
+  <% end %>
+  <p><%= submit_tag "Submit" %></p>
+<% end %>
