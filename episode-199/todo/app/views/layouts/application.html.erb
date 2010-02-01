@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'mobile' if mobile_device? %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <p>
+        <% if mobile_device? %>
+          <%= link_to "Full Site", :mobile => 0 %>
+        <% else %>
+          <%= link_to "Mobile Site", :mobile => 1 %>
+        <% end %>
+      </p>
+      
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <%- if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <%- end -%>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

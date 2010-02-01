@@ -1,0 +1,12 @@
+<% title "Projects" %>
+
+<ul>
+  <% for project in @projects %>
+    <li class="arrow">
+      <%= link_to h(project.name), project %>
+      <small class="counter"><%= project.tasks.size %></small>
+    </li>
+  <% end %>
+</ul>
+
+<ul><li class="arrow"><%= link_to "New Project", new_project_path %></li></ul>

@@ -1,0 +1,13 @@
+<% title "Projects" %>
+
+<% for project in @projects %>
+  <div class="project">
+    <h2><%= link_to h(project.name), project %></h2>
+    <p class="actions">
+      <%= link_to "Edit", edit_project_path(project) %> |
+      <%= link_to "Destroy", project, :confirm => 'Are you sure?', :method => :delete %>
+    </p>
+  </div>
+<% end %>
+
+<p><%= link_to "New Project", new_project_path %></p>
