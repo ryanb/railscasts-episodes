@@ -1,0 +1,11 @@
+Railscasts Episode #202: Active Record Queries in Rails 3
+
+http://railscasts.com/episodes/202
+
+rails console
+  Article.all
+  articles = Article.order("name")
+  articles.all
+  articles.first
+  Article.recent.all
+  puts Article.recent.to_sql
