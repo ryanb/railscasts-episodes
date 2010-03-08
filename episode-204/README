@@ -1,0 +1,9 @@
+Railscasts Episode #204: XSS Protection in Rails 3
+
+http://railscasts.com/episodes/204
+
+Commands
+  rails c
+  "foo".html_safe?
+  safe = "safe".html_safe
+  safe.html_safe?
