@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UJS Example</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $("#alert").click(function() {
+          alert(this.getAttribute("data-message"));
+          return false;
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <h1><a href="#" id="alert" data-message="Hello UJS!">Click Here</a></h1>
+  </body>
+</html>
