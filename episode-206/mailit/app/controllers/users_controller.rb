@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
-    UserMailer.registration_confirmation(@user).deliver
 
     respond_to do |format|
       format.html # show.html.erb
