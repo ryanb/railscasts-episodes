@@ -1,0 +1,12 @@
+Railscasts Episode #206: Action Mailer in Rails 3
+
+http://railscasts.com/episodes/206
+
+Commands
+
+  rails mailit
+  cd mailit
+  rails g scaffold user name:string email:string
+  rake db:migrate
+  rails g mailer user_mailer
+  bundle install
