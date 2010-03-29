@@ -1,0 +1,27 @@
+<% title @article.name %>
+
+<p class="author"><em>from <%=h @article.author_name %></em></p>
+
+<%= textilize(coderay(@article.content)) %>
+
+<p>
+  <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Back to Articles", articles_path %>
+</p>
+
+<% unless @article.comments.empty? %>
+  <h2><%= pluralize(@article.comments.size, 'comment') %></h2>
+
+  <div id="comments">
+  <% for comment in @article.comments %>
+    <div class="comment">
+      <strong><%= link_to_unless comment.site_url.blank?, h(comment.author_name), h(comment.site_url) %></strong>
+      <em>on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %></em>
+      <%=simple_format comment.content %>
+    </div>
+  <% end %>
+  </div>
+<% end %>
+
+<h3>Add your comment:</h3>
+<%= render :partial => 'comments/form' %>

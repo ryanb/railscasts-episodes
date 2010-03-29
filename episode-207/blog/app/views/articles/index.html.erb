@@ -1,0 +1,12 @@
+<% title "Articles" %>
+
+<div id="articles">
+<% for article in @articles %>
+  <h2>
+    <%= link_to h(article.name), article %>
+    <span class="comments">(<%= pluralize(article.comments.size, 'comment') %>)</span>
+  </h2>
+  <div class="author">from <%=h article.author_name %> on <%= article.created_at.strftime('%b %d, %Y') %></div>
+  <div class="content"><%= article.content %></div>
+<% end %>
+</div>
