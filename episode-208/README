@@ -1,0 +1,10 @@
+Railscasts Episode #208: ERB Blocks in Rails 3
+
+http://railscasts.com/episodes/208
+
+Commands
+
+  rvm install ruby-head
+  rvm ruby-head
+  gem install rails --pre
+  bundle install
