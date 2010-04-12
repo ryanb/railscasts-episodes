@@ -1,0 +1,11 @@
+Railscasts Episode #209: Introducing Devise
+
+http://railscasts.com/episodes/209
+
+Commands
+  
+  bundle install
+  rails generate devise_install
+  rails generate devise User
+  rake db:migrate
+  rake routes

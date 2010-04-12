@@ -1,0 +1,17 @@
+<% title @project.name %>
+
+<h2>Tasks</h2>
+<ul>
+  <% for task in @project.tasks %>
+    <li>
+      <%= task.name %>
+      (<%= link_to "Edit", edit_task_path(task) %> |
+      <%= link_to "Destroy", task, :confirm => "Are you sure?", :method => :delete %>)
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "New Task", new_task_path(:project_id => @project) %> |
+  <%= link_to "View All Projects", projects_path %>
+</p>
