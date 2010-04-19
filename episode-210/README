@@ -1,0 +1,10 @@
+Railscasts Episode #210: Customizing Devise
+
+http://railscasts.com/episodes/210
+
+Commands
+
+  rails generate devise_views
+  rails generate migration add_username_to_users username:string
+  rake db:migrate
+  rails c

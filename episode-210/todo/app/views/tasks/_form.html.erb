@@ -1,0 +1,13 @@
+<%= error_messages_for :task %>
+<%= form_for @task do |f| %>
+  <%= f.hidden_field :project_id %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :completed_at %><br />
+    <%= f.date_select :completed_at %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
