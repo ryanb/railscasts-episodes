@@ -1,0 +1,15 @@
+<%= form_for(@user) do |f| %>
+  <%= render "shared/error_messages", :target => @user %>
+  
+  <div class="field">
+    <%= f.label :name %><%= mark_required(@user, :name) %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><%= mark_required(@user, :email) %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

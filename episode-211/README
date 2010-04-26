@@ -1,0 +1,12 @@
+Railscasts Episode #211: Validations in Rails 3
+
+http://railscasts.com/episodes/211
+
+Commands
+
+  gem install rails --pre
+  gem cleanup
+  rails store
+  cd store
+  rails g scaffold user name:string email:string
+  rake db:migrate
