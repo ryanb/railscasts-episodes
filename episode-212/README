@@ -1,0 +1,9 @@
+Railscasts Episode #212: Refactoring & Dynamic Delegator
+
+http://railscasts.com/episodes/212
+
+rails console
+
+  Product.search({}).class
+  Object.instance_methods
+  BasicObject.instance_methods
