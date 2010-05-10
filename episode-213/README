@@ -1,0 +1,7 @@
+Railscasts Episode #213: Calendars
+
+http://railscasts.com/episodes/213
+
+Command
+
+  script/plugin install git://github.com/p8/table_builder.git

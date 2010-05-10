@@ -1,0 +1,4 @@
+Railscasts Example Blog App
+--
+
+To setup the app, just run `rake setup`.
