@@ -1,0 +1,109 @@
+A/Bingo Version 1.0.0
+======
+
+Rails A/B testing.  One minute to install.  One line to set up a new A/B test.
+One line to track conversion.
+
+For usage notes, see: http://www.bingocardcreator.com/abingo
+
+Installation instructions are below usage examples.
+
+Key default features:
+  -- Conversions only tracked once per individual.
+  -- Conversions only tracked if individual saw test.
+  -- Same individual ALWAYS sees same alternative for same test.
+  -- Syntax sugar.  Specify alternatives as a range, array,
+       hash of alternative to weighting, or just let it default to true or false.
+  -- A simple z-test of statistical significance, with output so clear anyone in your organization
+       can understand it.
+
+Example: View
+
+<% ab_test("login_button", ["/images/button1.jpg", "/images/button2.jpg"]) do |button_file| %>
+  <%= img_tag(button_file, :alt => "Login!") %>
+<% end %>
+
+Example: Controller
+
+def register_new_user
+  #See what level of free points maximizes users' decision to buy replacement points.
+  @starter_points = ab_test("new_user_free_points", [100, 200, 300])
+end
+
+Example: Controller
+
+def registration
+  if (ab_test("send_welcome_email"), :conversion => "purchase")
+    #send the email, track to see if it later increases conversion to full version
+  end
+end
+
+Example: Conversion tracking (in a controller!)
+
+def buy_new_points
+  #some business logic
+  bingo!("buy_new_points")  #Either a conversion named with :conversion or a test name.
+end
+
+Example: Conversion tracking (in a view)
+
+Thanks for signing up, dude! <% bingo!("signup_page_redesign") >
+
+Example: Statistical Significance Testing
+
+Abingo::Experiment.last.describe_result_in_words
+=> "The best alternative you have is: [0], which had 130 conversions from 5000 participants (2.60%).
+    The other alternative was [1], which had 1800 conversions from 100000 participants (1.80%).
+    This difference is 99.9% likely to be statistically significant, which means you can be extremely
+    confident that it is the result of your alternatives actually mattering, rather than being due to
+    random chance.  However, this doesn't say anything about how much the first alternative is really
+    likely to be better by."
+
+Installation
+=======
+
+1)  REQUIRED: You'll need to generate a DB migration to prepare two tables, 
+then migrate your database.  (Note: slight edits required if you use the table names
+"experiments" or "alternatives" at present.)  Note: if you are upgrading to A/Bingo 1.0.0, you'll
+want to do this again.
+
+ruby script/generate abingo_migration
+rake db:migrate
+
+2)  REQUIRED: You need to tell A/Bingo a user's identity so that it knows who is
+who if they come back to a test.  (The same identity will ALWAYS see the same
+alternative for the same test.)  How you do this is up to you -- I suggest integrating
+with your login/account infrastructure.  The simplest thing that can possibly work
+
+#Somewhere in application.rb
+before_filter :set_abingo_identity
+
+def set_abingo_identity
+  if (session[:abingo_identity])
+    Abingo.identity = session[:abingo_identity]
+  else
+    session[:abingo_identity] = Abingo.identity = rand(10 ** 10).to_i
+  end
+end
+
+3)  RECOMMENDED: A/Bingo makes HEAVY use of the cache to reduce load on the
+database and share potentially long-lived "temporary" data, such as what alternative
+a given visitor should be shown for a particular test.  You SHOULD use a cache
+which is shared across all Rails processes -- that probably means MemcachedStore or RedisStore.
+
+You PROBABLY SHOULD use a persistent cache in case you need to restart your
+machine.  This is an amazingly good use case for MemcacheDB, so if you want to
+try playing with that, Google it.  (Sets up VERY easily on the newer Ubuntu distros.)
+
+If you can't use a persistent cache, you're probably still OK if Memcached very
+rarely needs to be restarted.  If the cache gets flushed, you will double-count
+entrants to a particular experiment and possibly double-count conversions, but
+that may not be the worse thing in the world.
+
+A/Bingo defaults to using the same cache store as Rails.  If you want to change it
+
+#production.rb
+Abingo.cache = ActiveSupport::Cache::MemCacheStore.new("cache.example.com:12345") #best if really memcacheDB
+
+
+Copyright (c) 2009-2010 Patrick McKenzie, released under the MIT license

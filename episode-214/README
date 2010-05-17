@@ -1,0 +1,11 @@
+Railscasts Episode #214: A/B Testing with A/Bingo
+
+http://railscasts.com/episodes/214
+
+Commands
+
+  script/plugin install git://git.bingocardcreator.com/abingo.git
+  script/generate abingo_migration
+  rake db:migrate
+  script/generate controller abingo_dashboard
+  script/plugin install --force git://github.com/ryanb/abingo.git

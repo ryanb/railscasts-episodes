@@ -1,0 +1,30 @@
+<% ab_test("signup_title", ["Sign up", "Registration", "Free Sign up"], :conversion => "signup") do |signup_title| %>
+  <% title "Free Sign up" %>
+<% end %>
+
+<% if ab_test "signup_intro", nil, :conversion => "signup" %>
+  <p>Complete the form below to create a new user account. You will then be able to create projects and tasks, and mark them as complete when finishing them.</p>
+<% end %>
+
+<p>Already have an account? <%= link_to "Log in", login_path %>.</p>
+
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email, "Email Address" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
