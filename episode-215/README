@@ -1,0 +1,15 @@
+Railscasts Episode #215: Advanced Queries in Rails 3
+
+http://railscasts.com/episodes/215
+
+rails console
+
+  Product.cheap.to_sql
+  (Category.joins(:products) & Product.cheap).to_sql
+  Category.with_cheap_products.to_sql
+  p = Product.discontinued.build
+  p.discontinued
+  t = Product.arel_table
+  t[:price].eq(2.99)
+  t[:name].matches("%catan").to_sql
+  Product.where(t[:price].eq(2.99).or(t[:name].matches("%catan")))
