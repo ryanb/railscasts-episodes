@@ -1,0 +1,12 @@
+Railscasts Episode #216: Generators in Rails 3
+
+http://railscasts.com/episodes/216
+
+Commands
+
+  rails g
+  rails g scaffold --help
+  rails g scaffold project name:string --no-stylesheets
+  bundle install
+  rails g scaffold task project_id:integer
+  rails g scaffold category name:string
