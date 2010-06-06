@@ -1,0 +1,14 @@
+<% title "Order" %>
+
+<p>
+  <strong>Shipping Name:</strong>
+  <%=h @order.shipping_name %>
+</p>
+<p>
+  <strong>Billing Name:</strong>
+  <%=h @order.billing_name %>
+</p>
+
+<p>
+  <%= link_to "View All", orders_path %>
+</p>

@@ -1,0 +1,17 @@
+<% title "Orders" %>
+
+<table>
+  <tr>
+    <th>Shipping Name</th>
+    <th>Billing Name</th>
+  </tr>
+  <% for order in @orders %>
+    <tr>
+      <td><%=h order.shipping_name %></td>
+      <td><%=h order.billing_name %></td>
+      <td><%= link_to "Show", order %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Order", new_order_path %></p>

@@ -1,0 +1,11 @@
+<% title "New Order" %>
+
+<% form_for @order do |f| %>
+  <%= f.error_messages %>
+  <%= render "#{@order.current_step}_step", :f => f %>
+  <p><%= f.submit "Continue" %></p>
+  <p><%= f.submit "Back", :name => "back_button" unless @order.first_step? %></p>
+<% end %>
+
+
+<p><%= link_to "Back to List", orders_path %></p>
