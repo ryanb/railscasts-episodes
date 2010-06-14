@@ -1,0 +1,11 @@
+Railscasts Episode #218: Making Generators in Rails 3
+
+http://railscasts.com/episodes/218
+
+Commands
+
+  rails g generator --help
+  rails g generator layout
+  rails g layout --help
+  rails g layout admin
+  rails g layout foo --skip-stylesheet
