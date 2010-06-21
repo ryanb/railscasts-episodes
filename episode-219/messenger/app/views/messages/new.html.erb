@@ -1,0 +1,20 @@
+<% title "Contact Us" %>
+
+<%= form_for @message do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :content, "Message" %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p><%= f.submit "Send Message" %></p>
+<% end %>
+
+
