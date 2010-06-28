@@ -1,0 +1,24 @@
+<% title "Product" %>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category_id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_product_path(@product) %> |
+  <%= link_to "Destroy", @product, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", products_path %>
+</p>

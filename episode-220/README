@@ -1,0 +1,8 @@
+Railscasts Episode #220: PDFKit
+
+http://railscasts.com/episodes/220
+
+Commands
+
+  bundle install
+  rake middleware

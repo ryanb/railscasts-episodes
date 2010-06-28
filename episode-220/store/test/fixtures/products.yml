@@ -1,0 +1,11 @@
+one:
+  category_id: 1
+  name: MyString
+  price: 9.99
+  description: MyText
+
+two:
+  category_id: 1
+  name: MyString
+  price: 9.99
+  description: MyText
