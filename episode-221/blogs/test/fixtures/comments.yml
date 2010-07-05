@@ -1,0 +1,11 @@
+one:
+  article_id: 1
+  author_name: MyString
+  site_url: MyString
+  content: MyText
+
+two:
+  article_id: 1
+  author_name: MyString
+  site_url: MyString
+  content: MyText

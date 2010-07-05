@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  content: MyText
+  author_name: MyString
+  blog_id: 1
+
+two:
+  name: MyString
+  content: MyText
+  author_name: MyString
+  blog_id: 1
