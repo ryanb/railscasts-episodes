@@ -1,0 +1,8 @@
+Railscasts Episode #223: Charts
+
+http://railscasts.com/episodes/223
+
+rails console
+
+  Order.group("date(purchased_at)").select("purchased_at, sum(total_price) as total_price").first.total_price.to_f
+  Order.group("date(purchased_at)").select("purchased_at, sum(total_price) as total_price").first.purchased_at.to_date

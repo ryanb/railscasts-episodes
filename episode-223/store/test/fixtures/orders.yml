@@ -1,0 +1,9 @@
+one:
+  total_price: 9.99
+  purchased_at: 2010-07-17 16:47:20
+  shipping: false
+
+two:
+  total_price: 9.99
+  purchased_at: 2010-07-17 16:47:20
+  shipping: false
