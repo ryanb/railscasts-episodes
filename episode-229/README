@@ -1,0 +1,8 @@
+Railscasts Episode #229: Polling for Changes
+
+http://railscasts.com/episodes/229
+
+Commands
+
+  bundle install
+  rails g jquery:install

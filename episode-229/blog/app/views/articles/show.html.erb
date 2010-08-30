@@ -1,0 +1,19 @@
+<% title @article.name %>
+
+<div id="article" data-id="<%= @article.id %>">
+  <%= simple_format @article.content %>
+
+  <p><%= link_to "Back to Articles", articles_path %></p>
+
+  <% unless @article.comments.empty? %>
+    <h2><%= pluralize(@article.comments.size, 'comment') %></h2>
+
+    <div id="comments">
+      <%= render @article.comments %>
+    </div>
+  <% end %>
+
+  <h3>Add your comment:</h3>
+
+  <%= render :partial => 'comments/form' %>
+</div>
