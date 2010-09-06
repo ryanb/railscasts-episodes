@@ -1,0 +1,13 @@
+<% title "Products" %>
+
+<% for product in @products %>
+  <div class="product">
+    <h2><%= product.name %></h2>
+    <div class="details">
+      Price: <%= number_to_currency(product.price) %> |
+      <%= link_to "Read Reviews", product_reviews_path(product) %>
+    </div>
+  </div>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>

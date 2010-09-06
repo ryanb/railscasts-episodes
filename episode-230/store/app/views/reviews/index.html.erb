@@ -1,0 +1,16 @@
+<% title "Reviews for #{@product.name}" %>
+
+<p><%= link_to "Back to Products", products_path %></p>
+
+<% if @reviews.empty? %>
+  <h2>No reviews yet.</h2>
+<% else %>
+  <% for review in @reviews %>
+    <div class="review">
+      <p>Rating: <%= review.rating %></p>
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+<% end %>
+
+<p><%= link_to "Add a Review", new_product_review_path(@product) %></p>
