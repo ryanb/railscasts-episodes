@@ -1,0 +1,9 @@
+Railscasts Episode #233: Engage with Devise
+
+http://railscasts.com/episodes/233
+
+Commands
+
+  bundle install
+  rails g migration add_rpx_to_users rpx_identifier:string
+  rake db:migrate
