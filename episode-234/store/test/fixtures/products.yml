@@ -1,0 +1,15 @@
+one:
+  name: MyString
+  price: 9.99
+  released_on: 2010-10-03
+  category_id: 1
+  rating: 1
+  discontinued: false
+
+two:
+  name: MyString
+  price: 9.99
+  released_on: 2010-10-03
+  category_id: 1
+  rating: 1
+  discontinued: false

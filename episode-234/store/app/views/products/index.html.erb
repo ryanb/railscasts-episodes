@@ -1,0 +1,14 @@
+<% title "Products" %>
+
+<div class="product">
+  <% for product in @products %>
+    <h2><%= link_to product.name, product %></h2>
+    <div>
+      Price: <%= number_to_currency product.price %><br />
+      Category: <%= product.category.name %><br />
+      <%= link_to "Edit", [:edit, product] %>
+    </div>
+  <% end %>
+</div>
+
+<p><%= link_to "New Product", new_product_path %></p>

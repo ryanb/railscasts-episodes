@@ -1,0 +1,32 @@
+<% title "Product" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+<p>
+  <strong>Released On:</strong>
+  <%= @product.released_on %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @product.category_id %>
+</p>
+<p>
+  <strong>Rating:</strong>
+  <%= @product.rating %>
+</p>
+<p>
+  <strong>Discontinued:</strong>
+  <%= @product.discontinued %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_product_path(@product) %> |
+  <%= link_to "Destroy", @product, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", products_path %>
+</p>

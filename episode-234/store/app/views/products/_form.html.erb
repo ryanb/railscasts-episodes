@@ -1,0 +1,10 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.error_messages %>
+  <%= f.input :name %>
+  <%= f.input :price, :hint => "prices should be in USD" %>
+  <%= f.input :released_on %>
+  <%= f.association :category, :include_blank => false %>
+  <%= f.input :rating, :collection => 1..5, :as => :radio %>
+  <%= f.input :discontinued %>
+  <%= f.button :submit %>
+<% end %>

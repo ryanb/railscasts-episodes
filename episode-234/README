@@ -1,0 +1,8 @@
+Railscasts Episode #234: Simple Form
+
+http://railscasts.com/episodes/234
+
+Commands
+
+  bundle_install
+  rails g simple_form:install
