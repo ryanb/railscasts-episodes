@@ -1,0 +1,16 @@
+<% title "Projects" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for project in @projects %>
+    <tr>
+      <td><%= link_to project.name, project %></td>
+      <td><%= link_to "Edit", edit_project_path(project) %></td>
+      <td><%= link_to "Destroy", project, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Project", new_project_path %></p>

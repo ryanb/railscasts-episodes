@@ -1,0 +1,9 @@
+Railscasts Episode #235: OmniAuth Part 1
+
+http://railscasts.com/episodes/235
+
+Commands
+
+  bundle install
+  rails g nifty:scaffold authentication user_id:integer provider:string uid:string index create destroy
+  rake db:migrate
