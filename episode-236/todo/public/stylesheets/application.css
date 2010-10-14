@@ -1,0 +1,144 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin-bottom: 10px;
+  width: 320px;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
+#user_nav {
+  float: right;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.authentications {
+  margin-bottom: 30px;
+}
+
+.authentication {
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.authentication .remove {
+  text-decoration: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 10px;
+}
+
+.authentication .remove:hover {
+  color: #FFF;
+  background-color: #777;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.authentication img {
+  float: left;
+}
+
+.authentication .provider, .authentication .uid {
+  margin-left: 38px;
+  margin-right: 20px;
+}
+
+.authentication .provider {
+  font-weight: bold;
+}
+
+.authentication .uid {
+  color: #666;
+  font-size: 11px;
+}
+
+.auth_provider img {
+  display: block;
+}
+
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
