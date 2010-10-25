@@ -1,0 +1,13 @@
+<% title "Articles" %>
+
+<div id="articles">
+<% for article in @articles %>
+  <h2>
+    <%= link_to article.name, article %>
+  </h2>
+  <div class="created_at">on <%= article.created_at.strftime('%b %d, %Y') %></div>
+  <div class="content"><%= simple_format(article.content) %></div>
+<% end %>
+</div>
+
+<p><%= link_to "New Article", new_article_path %></p>

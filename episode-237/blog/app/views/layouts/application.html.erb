@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) || "Untitled" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <div id="user_nav">
+        <% if logged_in? %>
+          Welcome <%= current_user.username %>.
+          <%= link_to "Edit profile", edit_current_user_path %> or
+          <%= link_to "Log out", logout_path %>
+        <% else %>
+          <%= link_to "Sign up", signup_path %> or
+          <%= link_to "log in", login_path %>.
+        <% end %>
+      </div>
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

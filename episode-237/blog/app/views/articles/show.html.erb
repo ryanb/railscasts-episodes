@@ -1,0 +1,10 @@
+<% title @article.name, false %>
+
+<h1 class="<%= "important" if @article.important? %>"><%= @article.name %></h1>
+
+<%= simple_format @article.content %>
+
+<p>
+  <%= link_to "Edit Article", edit_article_path(@article) %> |
+  <%= link_to "Back to Articles", articles_path %>
+</p>
