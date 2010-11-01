@@ -1,0 +1,12 @@
+Railscasts Episode #238: Mongoid
+
+http://railscasts.com/episodes/238
+
+Commands
+
+  bundle
+  rails g mongoid:config
+  rails g scaffold article name:string content:text
+  rails g model comment name:string content:text
+  rails g controller comments
+  rails g scaffold author name:string
