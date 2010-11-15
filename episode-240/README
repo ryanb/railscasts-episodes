@@ -1,0 +1,7 @@
+Railscasts Episode #240: Search, Sort, Paginate with AJAX
+
+http://railscasts.com/episodes/240
+
+Commands
+
+  rails g jquery:install

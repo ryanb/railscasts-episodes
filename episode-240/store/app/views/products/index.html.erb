@@ -1,0 +1,13 @@
+<% title "Products" %>
+
+<%= form_tag products_path, :method => 'get', :id => "products_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <div id="products"><%= render 'products' %></div>
+<% end %>
+
+
+
+<p><%= link_to "New Product", new_product_path %></p>
