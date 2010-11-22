@@ -1,0 +1,9 @@
+Railscasts Episode #241: Simple Omniauth
+
+http://railscasts.com/episodes/241
+
+Commands
+
+  rails g controller sessions
+  rails g model user provider:string uid:string name:string
+  rake db:migrate
