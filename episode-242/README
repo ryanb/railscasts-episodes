@@ -1,0 +1,14 @@
+Railscasts Episode #242: Thor
+
+http://railscasts.com/episodes/242
+
+Commands
+
+  thor help
+  thor list
+  thor setup:config
+  thor setup:config --force
+  thor setup:config private.yml --force
+  thor install lib/tasks/setup.thor
+  thor setup:populate
+  thor setup:populate --count 5

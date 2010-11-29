@@ -1,0 +1,13 @@
+<%= form_for @comment do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :article_id %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :content, "Comment" %><br />
+    <%= f.text_area :content, :rows => '12', :cols => 35 %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
