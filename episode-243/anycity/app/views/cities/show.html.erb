@@ -1,0 +1,16 @@
+<% title "City" %>
+
+<p>
+  <strong>Zip Code:</strong>
+  <%= @city.zip_code %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @city.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_city_path(@city) %> |
+  <%= link_to "Destroy", @city, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", cities_path %>
+</p>

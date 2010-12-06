@@ -1,0 +1,7 @@
+one:
+  zip_code: MyString
+  name: MyString
+
+two:
+  zip_code: MyString
+  name: MyString

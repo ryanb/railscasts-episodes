@@ -1,0 +1,10 @@
+Railscasts Episode #243: Beanstalkd and Stalker
+
+http://railscasts.com/episodes/243
+
+Commands
+
+  beanstalkd -d
+  killall beanstalkd
+  beanstalkd -d -b ...
+  stalk ./config/jobs.rb
