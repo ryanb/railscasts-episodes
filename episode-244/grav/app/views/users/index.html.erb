@@ -1,0 +1,19 @@
+<% title "Users" %>
+
+<table>
+  <tr>
+    <th>Avatar</th>
+    <th>Email</th>
+  </tr>
+  <% for user in @users %>
+    <tr>
+      <td><%= image_tag avatar_url(user) %></td>
+      <td><%= user.email %></td>
+      <td><%= link_to "Show", user %></td>
+      <td><%= link_to "Edit", edit_user_path(user) %></td>
+      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New User", new_user_path %></p>
