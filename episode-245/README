@@ -1,0 +1,13 @@
+Railscasts Episode #245: New Gem with Bundler
+
+http://railscasts.com/episodes/245
+
+Commands
+
+  gem build lorem.gemspec
+  gem push lorem-0.0.1.gem
+  bundle
+  rake -T
+  rake build
+  rake install
+  rake release
