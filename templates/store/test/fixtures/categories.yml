@@ -1,5 +1,30 @@
-one:
-  name: MyString
+category_1:
+  name: Clothing
+  updated_at: Wed Jun 03 21:25:58 UTC 2009
+  id: 1
+  created_at: Wed Jun 03 21:25:58 UTC 2009
 
-two:
-  name: MyString
+category_2:
+  name: Electronics
+  updated_at: Wed Jun 03 21:26:08 UTC 2009
+  id: 2
+  created_at: Wed Jun 03 21:26:08 UTC 2009
+
+category_3:
+  name: Groceries
+  updated_at: Wed Jun 03 21:26:14 UTC 2009
+  id: 3
+  created_at: Wed Jun 03 21:26:14 UTC 2009
+
+category_4:
+  name: Furniture
+  updated_at: Wed Jun 03 21:26:48 UTC 2009
+  id: 4
+  created_at: Wed Jun 03 21:26:48 UTC 2009
+
+category_5:
+  name: "Toys & Games"
+  updated_at: Wed Jun 03 21:29:22 UTC 2009
+  id: 5
+  created_at: Wed Jun 03 21:29:22 UTC 2009
+

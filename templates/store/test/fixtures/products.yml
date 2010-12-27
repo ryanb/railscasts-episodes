@@ -1,11 +1,81 @@
-one:
-  category: one
-  name: MyString
-  price: 9.99
-  description: MyText
+product_1:
+  name: Settler's of Catan
+  updated_at: Wed Jun 03 21:29:42 UTC 2009
+  price: 29.95
+  id: 1
+  description: 
+  category_id: 5
+  created_at: Wed Jun 03 21:29:42 UTC 2009
 
-two:
-  category: two
-  name: MyString
-  price: 9.99
-  description: MyText
+product_2:
+  name: DVD Player
+  updated_at: Wed Jun 03 21:31:19 UTC 2009
+  price: 79.99
+  id: 2
+  description: 
+  category_id: 2
+  created_at: Wed Jun 03 21:31:19 UTC 2009
+
+product_3:
+  name: Red T-Shirt
+  updated_at: Wed Jun 03 21:31:47 UTC 2009
+  price: 12.49
+  id: 3
+  description: 
+  category_id: 1
+  created_at: Wed Jun 03 21:31:47 UTC 2009
+
+product_4:
+  name: Black Leather Couch
+  updated_at: Wed Jun 03 23:38:52 UTC 2009
+  price: 399.99
+  id: 4
+  description: 
+  category_id: 4
+  created_at: Wed Jun 03 21:32:20 UTC 2009
+
+product_5:
+  name: Oak Coffee Table
+  updated_at: Wed Jun 03 23:38:52 UTC 2009
+  price: 223.99
+  id: 5
+  description: 
+  category_id: 4
+  created_at: Wed Jun 03 21:32:49 UTC 2009
+
+product_6:
+  name: 1 Gallon Milk
+  updated_at: Wed Jun 03 21:33:05 UTC 2009
+  price: 2.99
+  id: 6
+  description: 
+  category_id: 3
+  created_at: Wed Jun 03 21:33:05 UTC 2009
+
+product_7:
+  name: Oh's Cereal
+  updated_at: Wed Jun 03 21:33:35 UTC 2009
+  price: 3.95
+  id: 7
+  description: 
+  category_id: 3
+  created_at: Wed Jun 03 21:33:35 UTC 2009
+
+product_8:
+  name: Video Game Console
+  updated_at: Wed Jun 03 23:16:28 UTC 2009
+  price: 299.95
+  id: 8
+  description: 
+  category_id: 2
+  created_at: Wed Jun 03 21:55:14 UTC 2009
+
+product_9:
+  name: Video Game Disc
+  updated_at: Wed Jun 03 23:16:28 UTC 2009
+  price: 29.95
+  id: 9
+  description: 
+  category_id: 2
+  created_at: Wed Jun 03 21:55:38 UTC 2009
+
