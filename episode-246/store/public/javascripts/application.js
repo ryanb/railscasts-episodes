@@ -1,5 +1,5 @@
 if (history && history.pushState) {
-  $(function(e) {
+  $(function() {
     $("#products th a, #products .pagination a").live("click", function(e) {
       $.getScript(this.href);
       history.pushState(null, document.title, this.href);
