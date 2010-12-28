@@ -1,0 +1,17 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<table class="pretty">
+  <tr>
+    <th><%= sortable "name" %></th>
+    <th><%= sortable "price" %></th>
+    <th><%= sortable "released_at", "Released" %></th>
+  </tr>
+  <% for product in @products %>
+    <tr>
+      <td><%= product.name %></td>
+      <td class="price"><%= number_to_currency(product.price) %></td>
+      <td><%= product.released_at.strftime("%B %e, %Y") %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @products %>
