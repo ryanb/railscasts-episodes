@@ -1,0 +1,16 @@
+<% title "Grocery List" %>
+
+<%= form_for Item.new do |f| %>
+  <p>
+    <%= f.text_field :name %>
+    <%= f.submit "Add" %>
+  </p>
+<% end %>
+
+<div id="items">
+  <ol>
+    <% for item in @items %>
+      <li><%= item.name %></li>
+    <% end %>
+  </ol>
+</div>
