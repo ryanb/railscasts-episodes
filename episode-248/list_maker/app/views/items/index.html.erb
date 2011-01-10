@@ -1,0 +1,15 @@
+<% title "Grocery List" %>
+
+<%= form_for Item.new do |f| %>
+  <p>
+    <%= f.text_field :name %>
+    <%= f.submit "Add" %>
+  </p>
+<% end %>
+
+<script type="text/html" id="item_template">
+  <li>${item.name}</li>
+</script>
+<ol id="items">
+  <li><em>Loading items...</em></li>
+</ol>

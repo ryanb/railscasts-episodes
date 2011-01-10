@@ -1,0 +1,9 @@
+Railscasts Episode #248: Offline Apps Part 2
+
+http://railscasts.com/episodes/248
+
+Commands
+
+  curl https://github.com/jquery/jquery-tmpl/raw/master/jquery.tmpl.js > public/javascripts/jquery.tmpl.js
+  curl https://github.com/wycats/jquery-offline/raw/master/lib/jquery.offline.js > public/javascripts/jquery.offline.js
+  curl https://github.com/wycats/jquery-offline/raw/master/lib/json.js > public/javascripts/json.js
