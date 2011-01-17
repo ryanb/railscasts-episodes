@@ -1,0 +1,8 @@
+Railscasts Episode #249: Notifications in Rails 3
+
+http://railscasts.com/episodes/249
+
+Commands
+
+  rails g nifty:scaffold page_request path:string page_duration:float view_duration:float db_duration:float index
+  rake db:migrate

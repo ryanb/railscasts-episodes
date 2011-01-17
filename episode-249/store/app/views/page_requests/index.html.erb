@@ -1,0 +1,19 @@
+<% title "Page Requests" %>
+
+<table>
+  <tr>
+    <th>Path</th>
+    <th>Page Duration</th>
+    <th>View Duration</th>
+    <th>Db Duration</th>
+  </tr>
+  <% for page_request in @page_requests %>
+    <tr>
+      <td><%= page_request.path %></td>
+      <td><%= page_request.page_duration %></td>
+      <td><%= page_request.view_duration %></td>
+      <td><%= page_request.db_duration %></td>
+    </tr>
+  <% end %>
+</table>
+

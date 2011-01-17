@@ -1,0 +1,11 @@
+one:
+  path: MyString
+  page_duration: 1.5
+  view_duration: 1.5
+  db_duration: 1.5
+
+two:
+  path: MyString
+  page_duration: 1.5
+  view_duration: 1.5
+  db_duration: 1.5
