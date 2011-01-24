@@ -1,0 +1,11 @@
+Railscasts Episode #250: Authentication from Scratch
+
+http://railscasts.com/episodes/250
+
+Commands
+
+  rails g controller users new
+  rails g model user email:string password_hash:string password_salt:string
+  rake db:migrate
+  rails dbconsole
+  rails g controller sessions new
