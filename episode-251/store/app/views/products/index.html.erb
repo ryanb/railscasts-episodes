@@ -1,0 +1,32 @@
+<% title "Products" %>
+
+<%= form_for @search do |f| %>
+  <p>
+    <%= f.label :name_contains %>
+    <%= f.text_field :name_contains %>
+  </p>
+  <p>
+    <%= f.label :price_gte, "Price ranges from" %>
+    <%= f.text_field :price_gte, :size => 8 %>
+    <%= f.label :price_lte, "to" %>
+    <%= f.text_field :price_lte, :size => 8 %>
+  </p>
+  <p class="button"><%= f.submit "Search" %></p>
+<% end %>
+
+<p>
+  Sort by:
+  <%= sort_link @search, :name %> |
+  <%= sort_link @search, :price %> |
+  <%= sort_link @search, :released_at %>
+</p>
+
+<% for product in @products %>
+  <div class="product">
+    <h2><%= link_to product.name, product %></h2>
+    <%= number_to_currency(product.price) %> |
+    Released: <%= product.released_at.strftime("%B %e, %Y") %>
+  </div>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>

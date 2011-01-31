@@ -1,0 +1,11 @@
+Railscasts Episode #251: MetaWhere & MetaSearch
+
+http://railscasts.com/episodes/251
+
+rails console
+
+  Product.where(:price.lt => 5)
+  Product.where({:price.lt => 5} | {:name.matches => "%video%"})
+  Product.order(:released_at.desc)
+  MetaWhere.operator_overload!
+  Product.where(:price < 5)
