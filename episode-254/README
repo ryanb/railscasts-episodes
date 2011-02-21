@@ -1,0 +1,8 @@
+Railscasts Episode #254: Pagination with Kaminari
+
+http://railscasts.com/episodes/254
+
+Commands
+
+  bundle
+  rails g kaminari:views default
