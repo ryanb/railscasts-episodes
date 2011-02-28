@@ -1,0 +1,9 @@
+Railscasts Episode #255: Undo with Paper Trail
+
+http://railscasts.com/episodes/255
+
+Commands
+
+  bundle
+  rails g paper_trail:install
+  rake db:migrate
