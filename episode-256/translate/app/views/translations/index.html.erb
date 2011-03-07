@@ -1,0 +1,25 @@
+<h1>Translations</h1>
+
+<ul>
+<% @translations.keys.each do |key| %>
+  <li><%= key %>: <%= @translations[key] %></li>
+<% end %>
+</ul>
+
+<h2>Add Translation</h2>
+
+<%= form_tag translations_path do %>
+  <p>
+    <%= label_tag :locale %><br />
+    <%= text_field_tag :locale %>
+  </p>
+  <p>
+    <%= label_tag :key %><br />
+    <%= text_field_tag :key %>
+  </p>
+  <p>
+    <%= label_tag :value %><br />
+    <%= text_field_tag :value %>
+  </p>
+  <p><%= submit_tag "Submit" %></p>
+<% end %>

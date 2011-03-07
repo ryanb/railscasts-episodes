@@ -1,0 +1,8 @@
+Railscasts Episode #256: I18n Backends
+
+http://railscasts.com/episodes/256
+
+Commands
+
+  rails g controller translations index
+  brew install redis
