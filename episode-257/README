@@ -1,0 +1,10 @@
+Railscasts Episode #257: Request Specs and Capybara
+
+http://railscasts.com/episodes/257
+
+Commands
+
+  bundle
+  rails g rspec:install
+  rails g integration_test task
+  rake spec:requests

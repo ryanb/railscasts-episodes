@@ -1,0 +1,17 @@
+<% title "Task List" %>
+
+<%= link_to_function "test js", '$(this).html("js works")' %>
+
+<%= form_for Task.new do |f| %>
+  <p>
+    <%= f.label :name, "New Task:" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add" %>
+  </p>
+<% end %>
+
+<ul>
+<% for task in @tasks %>
+  <li><%= task.name %></li>
+<% end %>
+</ul>
