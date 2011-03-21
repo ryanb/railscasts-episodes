@@ -1,0 +1,12 @@
+<%= form_for @book do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :author_tokens, "Authors" %><br />
+    <%= f.text_field :author_tokens, "data-pre" => @book.authors.map(&:attributes).to_json %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,19 @@
+<% title "Book" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @book.name %>
+</p>
+
+<strong>Authors:</strong>
+<ul>
+<% for author in @book.authors %>
+  <li><%= author.name %></li>
+<% end %>
+</ul>
+
+<p>
+  <%= link_to "Edit", edit_book_path(@book) %> |
+  <%= link_to "Destroy", @book, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", books_path %>
+</p>

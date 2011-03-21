@@ -1,0 +1,21 @@
+<% title "Books" %>
+
+<% if @books.empty? %>
+  <strong>Currently no books.</strong>
+<% else %>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for book in @books %>
+    <tr>
+      <td><%= book.name %></td>
+      <td><%= link_to "Show", book %></td>
+      <td><%= link_to "Edit", edit_book_path(book) %></td>
+      <td><%= link_to "Destroy", book, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>
+
+<p><%= link_to "New Book", new_book_path %></p>
