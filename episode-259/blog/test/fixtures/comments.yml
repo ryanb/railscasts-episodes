@@ -1,0 +1,9 @@
+one:
+  article_id: 1
+  name: MyString
+  content: MyText
+
+two:
+  article_id: 1
+  name: MyString
+  content: MyText

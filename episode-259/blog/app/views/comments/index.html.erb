@@ -1,0 +1,17 @@
+<% title "Comments for #{article.name}" %>
+
+<p><%= link_to "Back to Article", article %></p>
+
+<div id="comments">
+<% for comment in comments %>
+  <div class="comment">
+    <strong><%= comment.name %></strong>
+    <em>on <%= comment.created_at.strftime('%b %d, %Y at %I:%M %p') %></em>
+    <%= simple_format comment.content %>
+  </div>
+<% end %>
+</div>
+
+<h3>Add your comment:</h3>
+
+<%= render :partial => 'comments/form' %>
