@@ -1,0 +1,9 @@
+Railscasts Episode #260: Messaging with Faye
+
+http://railscasts.com/episodes/260
+
+Commands
+
+  gem install faye
+  rackup faye.ru -s thin -E production
+  curl http://localhost:9292/faye -d 'message={"channel":"/messages/new", "data":"hello"}'
