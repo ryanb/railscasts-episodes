@@ -4,11 +4,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(params[:message])
-    if @message.save
-      redirect_to messages_url
-    else
-      render :action => 'new'
-    end
+    @message = Message.create!(params[:message])
   end
 end
