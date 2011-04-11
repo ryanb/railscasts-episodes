@@ -1,0 +1,13 @@
+<%= form_for @order do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :credit_card_number %><br />
+    <%= f.text_field :credit_card_number %>
+    <span id="order_credit_card_number_error"></span>
+  </p>
+  <p>
+    <%= f.label :credit_card_expires_on, "Credit card expiration date" %><br />
+    <%= f.date_select :credit_card_expires_on, :add_month_numbers => true, :start_year => Time.now.year, :order => [:month, :year] %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,11 @@
+Railscasts Episode #261: Testing JavaScript with Jasmine
+
+http://railscasts.com/episodes/261
+
+Commands
+
+  bundle
+  rails g jasmine:install
+  rake jasmine
+  rake jasmine:ci
+  curl http://cloud.github.com/downloads/velesin/jasmine-jquery/jasmine-jquery-1.2.0.js > spec/javascripts/helpers/jasmine_jquery-1.2.0.js

@@ -1,0 +1,7 @@
+one:
+  credit_card_number: MyString
+  credit_card_expires_on: 2011-04-10
+
+two:
+  credit_card_number: MyString
+  credit_card_expires_on: 2011-04-10

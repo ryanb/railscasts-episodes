@@ -1,0 +1,18 @@
+<% title "Orders" %>
+
+<table>
+  <tr>
+    <th>Credit Card Number</th>
+    <th>Credit Card Expires On</th>
+  </tr>
+  <% for order in @orders %>
+    <tr>
+      <td><%= order.credit_card_number %></td>
+      <td><%= order.credit_card_expires_on %></td>
+      <td><%= link_to "Edit", edit_order_path(order) %></td>
+      <td><%= link_to "Destroy", order, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Order", new_order_path %></p>
