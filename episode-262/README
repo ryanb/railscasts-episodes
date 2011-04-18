@@ -1,0 +1,9 @@
+Railscasts Episode #261: Trees with Ancestry
+
+http://railscasts.com/episodes/262
+
+Commands used in episode
+
+  bundle
+  rails g migration add_ancestry_to_messages ancestry:string
+  rake db:migrate

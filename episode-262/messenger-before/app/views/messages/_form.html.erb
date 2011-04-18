@@ -1,0 +1,8 @@
+<%= form_for @message do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :content, "New Message" %><br />
+    <%= f.text_area :content, :rows => 8 %>
+  </p>
+  <p><%= f.submit "Post Message" %></p>
+<% end %>

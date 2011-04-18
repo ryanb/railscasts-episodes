@@ -1,0 +1,15 @@
+<% title "Messages" %>
+
+<% for message in @messages %>
+  <div class="message">
+    <div class="created_at"><%= message.created_at.strftime("%B %d, %Y") %></div>
+    <div class="content">
+      <%= message.content %>
+    </div>
+    <div class="actions">
+      <%= link_to "Destroy", message, :confirm => "Are you sure?", :method => :delete %>
+    </div>
+  </div>
+<% end %>
+
+<%= render "form" %>
