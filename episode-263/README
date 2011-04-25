@@ -1,0 +1,8 @@
+Railscasts Episode #263: Client Side Validations
+
+http://railscasts.com/episodes/263
+
+Commands used in episode
+
+  bundle
+  rails g client_side_validations:install
