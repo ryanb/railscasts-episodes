@@ -1,0 +1,16 @@
+<% title "Task List" %>
+
+<%= form_for @task do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name, "New Task:" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add" %>
+  </p>
+<% end %>
+
+<ul>
+<% for task in Task.all %>
+  <li><%= task.name %></li>
+<% end %>
+</ul>

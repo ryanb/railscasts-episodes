@@ -1,0 +1,10 @@
+Railscasts Episode #264: Guard
+
+http://railscasts.com/episodes/264
+
+Commands used in episode
+
+  bundle
+  guard init rspec
+  guard init livereload
+  guard
