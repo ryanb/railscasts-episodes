@@ -1,0 +1,10 @@
+Railscasts Episode #266: HTTP Streaming
+
+http://railscasts.com/episodes/266-http-streaming
+
+Commands used in episode
+
+  bundle
+  echo "listen 3000, :tcp_nopush => false" > config/unicorn.development.rb
+  unicorn_rails --config-file config/unicorn.development.rb
+  curl -i localhost:3000
