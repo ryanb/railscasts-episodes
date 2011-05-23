@@ -1,0 +1,25 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Credit card number</th>
+    <th>Credit card expires on</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.credit_card_number %></td>
+    <td><%= order.credit_card_expires_on %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

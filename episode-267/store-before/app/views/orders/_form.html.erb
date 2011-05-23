@@ -1,0 +1,26 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :credit_card_number %>
+    <%= f.text_field :credit_card_number %>
+    <div id="credit_card_number_error"></div>
+  </div>
+  <div class="field">
+    <%= f.label :credit_card_expires_on %>
+    <%= f.date_select :credit_card_expires_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

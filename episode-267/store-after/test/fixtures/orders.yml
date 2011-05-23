@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  credit_card_number: MyString
+  credit_card_expires_on: 2011-05-22
+
+two:
+  credit_card_number: MyString
+  credit_card_expires_on: 2011-05-22
