@@ -1,0 +1,27 @@
+/* 
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+  You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+
+#projects_controller {
+  .new_project {
+    background-color: $main-color;
+    color: #FFF;
+    padding: 5px 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    @include rounded-corners(5px);
+  }
+
+  .project {
+    border: solid 1px #777;
+    margin: 20px 0;
+    padding: 7px 12px;
+    @include rounded-corners(10px);
+  }
+
+  .project h2 {
+    margin: 0;
+  }
+}

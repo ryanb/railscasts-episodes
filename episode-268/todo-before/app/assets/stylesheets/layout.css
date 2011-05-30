@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  font-family: verdana;
+  font-size: 14px;
+}
+
+#header {
+  background-color: #03507B;
+  color: #FFF;
+  padding: 4px 100px;
+  border-bottom: solid 5px #00395A;
+}
+
+#header h1 {
+  font-size: 30px;
+}
+
+a {
+  color: #03507B;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.new_project {
+  background-color: #03507B;
+  color: #FFF;
+  padding: 5px 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#container {
+  margin: 0 100px;
+}
+
+.project {
+  border: solid 1px #777;
+  margin: 20px 0;
+  padding: 7px 12px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.project h2 {
+  margin: 0;
+}
