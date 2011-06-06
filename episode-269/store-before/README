@@ -1,0 +1,7 @@
+= RailsCasts Example Application
+
+Run these commands to try it out.
+
+  bundle
+  rake db:migrate
+  rails s

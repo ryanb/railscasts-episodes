@@ -1,0 +1,8 @@
+<h1>Products</h1>
+
+<% for product in @products %>
+  <div class="product">
+    <%= link_to product.name, product %>
+    <%= number_to_currency product.price %>
+  </div>
+<% end %>
