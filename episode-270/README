@@ -1,0 +1,8 @@
+RailsCasts Episode #270: Authentication in Rails 3.1
+
+http://railscasts.com/episodes/270-authentication-in-rails-3-1
+
+Commands used in episode
+
+  rails g model user email:string password_digest:string
+  rails s -e production
