@@ -1,0 +1,17 @@
+<% title @snippet.name %>
+
+<p>
+  <strong>Language:</strong>
+  <%= @snippet.language.titleize %>
+</p>
+<div class="code_block">
+  <% if @snippet.highlighted_code.present? %>
+    <%= raw @snippet.highlighted_code %>
+  <% else %>
+    <pre><%= @snippet.plain_code %></pre>
+  <% end %>
+</div>
+
+<p>
+  <%= link_to "New Snippet", new_snippet_path %>
+</p>

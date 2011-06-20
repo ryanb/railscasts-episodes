@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  language: MyString
+  plain_code: MyText
+  highlighted_code: MyText
+
+two:
+  name: MyString
+  language: MyString
+  plain_code: MyText
+  highlighted_code: MyText

@@ -1,0 +1,10 @@
+RailsCasts Episode #271: Resque
+
+http://railscasts.com/episodes/271-resque
+
+Commands used in episode
+
+  brew install redis
+  redis-server /usr/local/etc/redis.conf
+  resque-web
+  rake resque:work QUEUE='*'

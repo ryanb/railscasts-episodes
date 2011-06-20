@@ -1,0 +1,18 @@
+<% title "New Snippet" %>
+
+<%= form_for @snippet do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :language %><br />
+    <%= f.select :language, options_for_select([["Ruby", "ruby"], ["Python", "python"], ["JavaScript", "javascript"], ["CSS", "css"]]) %>
+  </p>
+  <p>
+    <%= f.label :plain_code, "Source Code" %><br />
+    <%= f.text_area :plain_code, :rows => 14, :cols => 50 %>
+  </p>
+  <p><%= f.submit "Post Snippet" %></p>
+<% end %>
