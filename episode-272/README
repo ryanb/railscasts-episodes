@@ -1,0 +1,8 @@
+RailsCasts Episode #272: Markdown with Redcarpet
+
+http://railscasts.com/episodes/272-markdown-with-redcarpet
+
+Commands used in episode
+
+  bundle
+  sudo easy_install pygments
