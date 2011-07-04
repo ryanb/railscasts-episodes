@@ -1,0 +1,8 @@
+RailsCasts Episode #273: Geocoder
+
+http://railscasts.com/episodes/273-geocoder
+
+Commands used in episode
+
+  rails g nifty:scaffold location address:string latitude:float longitude:float
+  bundle
