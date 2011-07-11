@@ -1,0 +1,11 @@
+RailsCasts Episode #274: Remember Me & Reset Password
+
+http://railscasts.com/episodes/274-remember-me-reset-password
+
+Commands used in episode
+
+  rails g migration add_auth_token_to_users auth_token:string
+  rake db:migrate
+  rails g controller password_resets new
+  rails g migration add_password_reset_to_users password_reset_token:string password_reset_sent_at:datetime
+  rails g mailer user_mailer password_reset
