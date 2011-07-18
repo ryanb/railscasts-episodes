@@ -1,0 +1,16 @@
+RailsCasts Episode #275: How I Test
+
+http://railscasts.com/episodes/275-how-i-test
+
+Commands used in episode
+
+  bundle
+  rails g rspec:install
+  mkdir spec/support spec/models spec/routing
+  guard init rspec
+  gem install rb-fsevent
+  rails g integration_test password_reset
+  rails g controller password_resets new --no-test-framework
+  rails g mailer user_mailer password_reset
+  rails g migration add_password_reset_to_users password_reset_token:string password_reset_sent_at:datetime
+  rake db:migrate
