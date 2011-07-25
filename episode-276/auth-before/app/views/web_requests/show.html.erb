@@ -1,0 +1,11 @@
+<h1>Web Request</h1>
+
+<p>
+  <strong>URL:</strong>
+  <%= @web_request.url %>
+</p>
+
+<p>
+  <strong>File Size:</strong>
+  <%= number_to_human_size(@web_request.content_length) %>
+</p>

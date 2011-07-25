@@ -1,0 +1,9 @@
+<h1>New Web Request</h1>
+
+<%= form_for @web_request do |f| %>
+  <div class="field">
+    <%= f.label :url, "URL" %>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
