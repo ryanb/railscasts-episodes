@@ -1,0 +1,11 @@
+<%= image_tag "uhoh/alert.png" %>
+
+<h1>Failures</h1>
+<ul>
+  <% for failure in @failures %>
+    <li><%= failure.message %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Failures", root_url %></p>
+<p><%= link_to "Simulate Failure", main_app.simulate_failure_path %></p>

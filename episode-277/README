@@ -1,0 +1,14 @@
+RailsCasts Episode #277 Mountable Engines
+
+http://railscasts.com/episodes/277-mountable-engines
+
+Commands used in episode
+
+  rails -v
+  rails plugin new uhoh --mountable
+  rails g controller failures index
+  rails g model failure message:text
+  rake db:migrate
+  rake uhoh:install:migrations
+  cd test/dummy
+  rails g controller simulate failure

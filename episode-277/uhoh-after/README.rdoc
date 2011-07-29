@@ -1,0 +1,20 @@
+= Uhoh
+
+This is a mountable engine created in RailsCasts episode #277. This is not a gem so these instructions will not work, but you can use this as an example readme for your own mountable engine.
+
+== Installation
+
+First add the gem to your Gemfile and run the bundle command.
+
+  gem 'uhoh'
+
+Next, mount the engine in your routes.rb under the path you want.
+
+  mount Uhoh::Engine => "/uhoh"
+
+Then copy over the migrations and run them.
+
+  rake uhoh:install:migrations
+  rake db:migrate
+
+Now when an exception is raised in your application it should be browsable at the "/uhoh" path. Don't forget to password protect if you're using this in production.
