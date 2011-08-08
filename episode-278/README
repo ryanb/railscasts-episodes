@@ -1,0 +1,10 @@
+RailsCasts Episode #278 Search with Sunspot
+
+http://railscasts.com/episodes/278-search-with-sunspot
+
+Commands used in episode
+
+  bundle
+  rails g sunspot_rails:install
+  rake sunspot:solr:start
+  rake sunspot:reindex

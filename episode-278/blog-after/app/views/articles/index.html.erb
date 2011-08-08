@@ -1,0 +1,36 @@
+<% title "Articles" %>
+
+<%= form_tag articles_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<% if params[:month].present? %>
+  <p><strong>Published: <%= params[:month] %></strong> (<%= link_to "remove", :month => nil %>)</p>
+<% end %>
+
+<% if @search.facet(:publish_month).rows.size > 1 %>
+<div id="facets">
+  <h3>Published</h3>
+  <ul>
+    <% for row in @search.facet(:publish_month).rows %>
+      <li><%= link_to row.value, :month => row.value %> (<%= row.count %>)</li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div id="articles">
+<% for article in @articles %>
+  <h2>
+    <%= link_to article.name, article %>
+    <span class="comments">(<%= pluralize(article.comments.size, 'comment') %>)</span>
+  </h2>
+  <div class="published_at">on <%= article.published_at.strftime('%b %d, %Y') %></div>
+  <div class="content"><%= article.content %></div>
+<% end %>
+</div>
+
+<p><%= link_to "New Article", new_article_path %></p>
