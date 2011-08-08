@@ -4,4 +4,5 @@ Run these commands to try it out.
 
   bundle
   rake db:migrate
+  rake db:fixtures:load
   rails s
