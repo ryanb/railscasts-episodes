@@ -7,20 +7,20 @@
   </p>
 <% end %>
 
-<% if params[:month].present? %>
-  <p><strong>Published: <%= params[:month] %></strong> (<%= link_to "remove", :month => nil %>)</p>
-<% end %>
-
-<% if @search.facet(:publish_month).rows.size > 1 %>
 <div id="facets">
   <h3>Published</h3>
   <ul>
     <% for row in @search.facet(:publish_month).rows %>
-      <li><%= link_to row.value, :month => row.value %> (<%= row.count %>)</li>
+      <li>
+        <% if params[:month].blank? %>
+          <%= link_to row.value, :month => row.value %> (<%= row.count %>)
+        <% else %>
+          <strong><%= row.value %></strong> (<%= link_to "remove", :month => nil %>)
+        <% end %>
+      </li>
     <% end %>
   </ul>
 </div>
-<% end %>
 
 <div id="articles">
 <% for article in @articles %>
