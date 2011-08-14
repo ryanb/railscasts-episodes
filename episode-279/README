@@ -1,0 +1,9 @@
+RailsCasts Episode #279 Understanding the Asset Pipeline
+
+http://railscasts.com/episodes/279-understanding-the-asset-pipeline
+
+Commands used in episode
+
+  bundle open jquery-rails
+  rails s -e production
+  rake assets:precompile
