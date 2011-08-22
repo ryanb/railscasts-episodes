@@ -1,0 +1,27 @@
+<% title @article.name %>
+
+<%= @article.content %>
+
+<p>
+  <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Destroy", @article, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", articles_path %>
+</p>
+
+<h2>Comments</h2>
+
+<div id="comments">
+  <% for comment in @article.comments %>
+    <div class="comment"><%= comment.content %></div>
+  <% end %>
+</div>
+
+<%= form_for @article.comments.build do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :article_id %>
+  <p>
+    <%= f.label :content, "Comment" %><br />
+    <%= f.text_area :content, :rows => '12', :cols => 35 %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

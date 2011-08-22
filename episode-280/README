@@ -1,0 +1,10 @@
+RailsCasts Episode #280: Pry with Rails
+
+http://railscasts.com/episodes/280-pry-with-rails
+
+Commands used in episode
+
+  gem install pry pry-doc
+  rvm gemset use global
+  pry
+  pry -r ./config/environment
