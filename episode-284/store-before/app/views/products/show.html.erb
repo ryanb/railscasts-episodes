@@ -1,0 +1,21 @@
+<p>
+  <b>Name:</b>
+  <%= @product.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= number_to_currency(@product.price) %>
+</p>
+
+<p>
+  <b>Released:</b>
+  <%= @product.released_at.strftime("%B %e, %Y") %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category.name %>
+</p>
+
+<%= link_to 'View all products', products_path %>

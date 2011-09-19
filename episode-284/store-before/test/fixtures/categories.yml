@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+electronics:
+  name: Electronics
+
+clothing:
+  name: Clothing
+
+groceries:
+  name: Groceries
+
+toys:
+  name: "Toys & Games"
+
+furniture:
+  name: Furniture

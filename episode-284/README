@@ -1,0 +1,10 @@
+RailsCasts Episode #284: Active Admin
+
+http://railscasts.com/episodes/284-active-admin
+
+Commands used in episode
+
+  bundle
+  rails g active_admin:install
+  rake db:migrate
+  rails g active_admin:resource product
