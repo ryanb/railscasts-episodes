@@ -1,0 +1,13 @@
+RailsCasts Episode #285: Spork
+
+http://railscasts.com/episodes/285-spork
+
+Commands used in episode
+
+  rspec .
+  time rspec .
+  bundle
+  spork --bootstrap
+  spork
+  rspec . --drb
+  guard init spork
