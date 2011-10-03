@@ -1,0 +1,16 @@
+<div id="profile">
+  <%= @user.avatar %>
+  <h1><%= @user.linked_name %></h1>
+  <dl>
+    <dt>Username:</dt>
+    <dd><%= @user.username %></dd>
+    <dt>Member Since:</dt>
+    <dd><%= @user.member_since %></dd>
+    <dt>Website:</dt>
+    <dd><%= @user.website %></dd>
+    <dt>Twitter:</dt>
+    <dd><%= @user.twitter %></dd>
+    <dt>Bio:</dt>
+    <dd><%= @user.bio %></dd>
+  </dl>
+</div>

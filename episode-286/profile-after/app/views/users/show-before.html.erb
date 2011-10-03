@@ -1,0 +1,34 @@
+<div id="profile">
+  <%= link_to_if @user.url.present?, image_tag("avatars/#{avatar_name(@user)}", class: "avatar"), @user.url %>
+  <h1><%= link_to_if @user.url.present?, (@user.full_name.present? ? @user.full_name : @user.username), @user.url %></h1>
+  <dl>
+    <dt>Username:</dt>
+    <dd><%= @user.username %></dd>
+    <dt>Member Since:</dt>
+    <dd><%= @user.member_since %></dd>
+    <dt>Website:</dt>
+    <dd>
+    <% if @user.url.present? %>
+      <%= link_to @user.url, @user.url %>
+    <% else %>
+      <span class="none">None given</span>
+    <% end %>
+    </dd>
+    <dt>Twitter:</dt>
+    <dd>
+    <% if @user.twitter_name.present? %>
+      <%= link_to @user.twitter_name, "http://twitter.com/#{@user.twitter_name}" %>
+    <% else %>
+      <span class="none">None given</span>
+    <% end %>
+    </dd>
+    <dt>Bio:</dt>
+    <dd>
+    <% if @user.bio.present? %>
+      <%=raw Redcarpet.new(@user.bio, :hard_wrap, :filter_html, :autolink).to_html %>
+    <% else %>
+      <span class="none">None given</span>
+    <% end %>
+    </dd>
+  </dl>
+</div>

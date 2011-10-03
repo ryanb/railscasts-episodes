@@ -1,0 +1,8 @@
+RailsCasts Episode #286: Draper
+
+http://railscasts.com/episodes/286-draper
+
+Commands used in episode
+
+  bundle
+  rails g draper:decorator user

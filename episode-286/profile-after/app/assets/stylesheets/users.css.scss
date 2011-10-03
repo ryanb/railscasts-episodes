@@ -1,0 +1,41 @@
+#profile {
+  .avatar {
+    float: left;
+    margin-left: 58px;
+    border: solid 1px #999;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-left: 175px;
+    padding-top: 28px;
+    a { color: #000; }
+  }
+
+  dl {
+    clear: both;
+  }
+
+  dt {
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    width: 160px;
+  }
+
+  dd {
+    margin-left: 175px;
+  }
+
+  dd p:first-child {
+    margin-top: 0;
+  }
+
+  dd, dt {
+    padding-top: 20px;
+  }
+
+  .none {
+    color: #999;
+  }
+}
