@@ -15,26 +15,26 @@ class UserPresenter < BasePresenter
   end
 
   def website
-    hande_none user.url do
+    handle_none user.url do
       h.link_to(user.url, user.url)
     end
   end
 
   def twitter
-    hande_none user.twitter_name do
+    handle_none user.twitter_name do
       h.link_to user.twitter_name, "http://twitter.com/#{user.twitter_name}"
     end
   end
 
   def bio
-    hande_none user.bio do
+    handle_none user.bio do
       markdown(user.bio)
     end
   end
 
 private
 
-  def hande_none(value)
+  def handle_none(value)
     if value.present?
       yield
     else
