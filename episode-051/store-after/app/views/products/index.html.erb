@@ -1,0 +1,23 @@
+<h1>Products</h1>
+
+<%# will_paginate @products, previous_label: h("<"), next_label: h(">") %>
+
+<% if @products.previous_page %>
+  <%= link_to "< Previous", params.merge(page: @products.previous_page) %>
+<% end %>
+Page <%= @products.current_page %> of <%= @products.total_pages %>
+<% if @products.next_page %>
+  <%= link_to "Next >", params.merge(page: @products.next_page) %>
+<% end %>
+
+<% for product in @products %>
+  <div class="product">
+    <h2><%= link_to product.name, product %></h2>
+    <div class="details">
+      <%= number_to_currency(product.price) %> |
+      Released <%= product.released_at.strftime("%B %e, %Y") %>
+    </div>
+  </div>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>
