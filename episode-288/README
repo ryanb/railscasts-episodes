@@ -1,0 +1,7 @@
+RailsCasts Episode #288: Billing with Stripe
+
+http://railscasts.com/episodes/288-billing-with-stripe
+
+Commands used in episode
+
+  rails g migration add_stripe_to_subscriptions stripe_customer_token:string

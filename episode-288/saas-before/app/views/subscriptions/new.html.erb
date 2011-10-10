@@ -1,0 +1,25 @@
+<h1>Signing up for "<%= @subscription.plan.name %>"</h1>
+<p>Includes <strong><%= @subscription.plan.kisses %> llama kisses</strong> for only <strong><%= number_to_currency @subscription.plan.price %></strong> per month!</p>
+
+<%= form_for @subscription do |f| %>
+  <% if @subscription.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+      <ul>
+      <% @subscription.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :plan_id %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Subscribe" %>
+  </div>
+<% end %>

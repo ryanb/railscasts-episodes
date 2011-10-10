@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  plan_id: 1
+  email: MyString
+
+two:
+  plan_id: 1
+  email: MyString

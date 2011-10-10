@@ -1,0 +1,2 @@
+module PlansHelper
+end

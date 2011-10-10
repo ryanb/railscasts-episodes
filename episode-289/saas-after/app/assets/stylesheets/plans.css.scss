@@ -1,0 +1,82 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#plans {
+  background-image: image-url("llama.jpg");
+  background-repeat: no-repeat;
+  background-position: 480px -10px;
+  margin: 0 auto;
+  padding-top: 60px;
+  margin-bottom: 10px;
+  width: 642px;
+  h1 {
+    font-size: 65px;
+    font-family: Georgia, Times;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .plan {
+    float: left;
+    width: 150px;
+    text-align: center;
+    margin-right: 10px;
+    .name {
+      color: #FFF;
+      padding: 5px 0;
+      border: solid 1px #5B6881;
+      border-bottom: none;
+      background: #386FB2;
+      background: -webkit-gradient(linear, left top, left bottom, from(#67B0EF), to(#2B5EA4));
+      background: -moz-linear-gradient(top,  #579CEA,  #2B5EA4);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#579CEA', endColorstr='#2B5EA4');
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+    }
+    .details {
+      padding-top: 5px;
+      border: solid 1px #8D8D8D;
+      background-color: #E8F4FD;
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+    }
+    .price {
+      font-size: 50px;
+    }
+    .per_month {
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #5E5E5E;
+    }
+    .kisses {
+      font-size: 18px;
+    }
+    .signup {
+      margin: 20px;
+      a {
+        font-size: 13px;
+        padding: 5px 10px 6px 10px;
+        font-weight: bold;
+        border: 1px solid #2A7531;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        color: #FFF;
+        background: #328039;
+        background: -webkit-gradient(linear, left top, left bottom, from(#56D854), to(#328039));
+        background: -moz-linear-gradient(top,  #56D854,  #328039);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56D854', endColorstr='#328039');
+        text-decoration: none;
+        text-shadow: 0 -1px 0 #036;
+      }
+    }
+  }
+}

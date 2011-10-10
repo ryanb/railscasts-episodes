@@ -1,0 +1,8 @@
+RailsCasts Episode #289: PayPal Recurring Billing
+
+http://railscasts.com/episodes/289-paypal-recurring-billing
+
+Commands used in episode
+
+  rails g migration add_paypal_to_subscriptions paypal_customer_token:string paypal_recurring_profile_token:string
+  rake db:migrate

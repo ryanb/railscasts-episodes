@@ -1,0 +1,16 @@
+#subscription {
+  width: 400px;
+  h1 {
+    font-size: 24px;
+  }
+}
+
+#stripe_error {
+  color: #D00;
+}
+
+#pay_with_paypal, #pay_with_card {
+  float: left;
+  margin-top: 10px;
+  margin-right: 5px;
+}
