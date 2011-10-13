@@ -1,0 +1,11 @@
+<h1>FAQs</h1>
+
+<ul>
+<% @faqs.each do |faq| %>
+  <li>
+    <%= link_to h(faq.question), faq %>
+  </li>
+<% end %>
+</ul>
+
+<p><%= link_to "New FAQ", new_faq_path %></p>

@@ -1,0 +1,8 @@
+Railscasts Episode #147: Sortable Lists (revised)
+
+http://railscasts.com/episodes/147-sortable-lists-revised
+
+Commands
+
+  rails g migration add_position_to_faqs position:integer
+  rake db:migrate

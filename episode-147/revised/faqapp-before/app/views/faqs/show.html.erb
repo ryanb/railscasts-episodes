@@ -1,0 +1,16 @@
+<h1>FAQ</h1>
+
+<p>
+  <strong>Question:</strong>
+  <%= @faq.question %>
+</p>
+<p>
+  <strong>Answer:</strong>
+  <%= @faq.answer %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_faq_path(@faq) %> |
+  <%= link_to "Destroy", @faq, confirm: 'Are you sure?', method: :delete %> |
+  <%= link_to "View All", faqs_path %>
+</p>
