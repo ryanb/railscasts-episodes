@@ -1,0 +1,21 @@
+<h1>Zip Code Lookup</h1>
+
+<%= form_tag root_url, method: :get do %>
+<p>
+  <%= text_field_tag :zip_code, params[:zip_code] %>
+  <%= submit_tag "Lookup", name: nil %>
+</p>
+<% end %>
+
+<% if @zip_code %>
+  <dl id ="zip_info">
+    <dt>City:</dt>
+    <dd><%= @zip_code.city %></dd>
+    <dt>State:</dt>
+    <dd><%= @zip_code.state %></dd>
+    <dt>Area Code:</dt>
+    <dd><%= @zip_code.area_code %></dd>
+    <dt>Time Zone:</dt>
+    <dd><%= @zip_code.time_zone %></dd>
+  </dl>
+<% end %>
