@@ -1,0 +1,28 @@
+// Place all the styles related to the boom controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#boom {
+  text-align: center;
+  h1 {
+    margin-bottom: 25px;
+  }
+  a {
+    font-size: 16px;
+    padding: 8px 20px;
+    font-weight: bold;
+    border: 1px solid #982C29;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    color: #FFF;
+    background: #B22323;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF4E4E), to(#A8231F));
+    background: -moz-linear-gradient(top,  #FF4E4E,  #A8231F);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4E4E', endColorstr='#A8231F');
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #036;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
