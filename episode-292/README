@@ -1,0 +1,49 @@
+RailsCasts Episode #292: Virtual Machines with Vagrant
+
+http://railscasts.com/episodes/292-virtual-machines-with-vagrant
+
+Commands used in episode
+
+  # setup vagrant
+  gem install vagrant
+  vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+  rails new todo
+  cd todo
+  vagrant init lucid32
+  mate Vagrantfile
+  vagrant up
+  vagrant ssh
+
+  # inside virtual machine
+  whoami
+  cd /vagrant
+  ruby -v
+  sudo apt-get update
+  sudo apt-get install build-essential zlib1g-dev curl git-core sqlite3 libsqlite3-dev
+
+  # install rbenv and Ruby 1.9.2
+  git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+  echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+  source .bash_profile
+  git clone git://github.com/sstephenson/ruby-build.git
+  cd ruby-build/
+  sudo ./install.sh 
+  rbenv install 1.9.2-p290
+
+  # get Rails running
+  cd /vagrant
+  gem install bundler
+  rbenv rehash
+  bundle
+  bundle exec rails s
+
+  # vagrant commands
+  vagrant reload
+  vagrant status
+  vagrant suspend
+  vagrant resume
+  vagrant halt
+  vagrant up
+  vagrant package
+  vagrant destroy

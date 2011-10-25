@@ -1,0 +1,31 @@
+RailsCasts Episode #293: Nginx & Unicorn
+
+http://railscasts.com/episodes/293-nginx-unicorn
+
+Commands used in episode
+
+  # setup nginx
+  sudo apt-get install nginx
+  nginx -h
+  cat /etc/init.d/nginx
+  /etc/init.d/nginx -h
+  sudo service nginx start
+  cd /etc/nginx
+  less nginx.conf
+  cd sites-enabled
+  sudo rm default
+  sudo ln -s /vagrant/config/nginx.conf todo
+  sudo service nginx restart
+
+  # setup unicorn
+  cd /vagrant
+  bundle install
+  bundle exec unicorn -c config/unicorn.rb -D
+  chmod +x config/unicorn_init.sh
+  sudo ln -s /vagrant/config/unicorn_init.sh /etc/init.d/unicorn
+  bundle install --binstubs
+  sudo service unicorn restart
+
+  # rbenv binstubs fix
+  rbenv local 1.9.2-p290
+  sed -i 's/env ruby/env ruby-local-exec/' bin/*
