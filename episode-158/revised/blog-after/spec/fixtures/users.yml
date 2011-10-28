@@ -1,0 +1,11 @@
+batman:
+  username: batman
+  email: batman@example.com
+  password_digest: "$2a$10$uh/MLjEjRXyKK9jZLFld7OMmaqP9o3uPC8jgr6iebMdD.hpcVfKwe"
+  admin: false
+
+admin:
+  username: admin
+  email: admin@example.com
+  password_digest: "$2a$10$uh/MLjEjRXyKK9jZLFld7OMmaqP9o3uPC8jgr6iebMdD.hpcVfKwe"
+  admin: true
