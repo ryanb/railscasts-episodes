@@ -1,0 +1,15 @@
+<h1>Products</h1>
+
+<div id="products">
+<% @products.each do |product| %>
+  <div class="product">
+    <h2><%= link_to product.name, product %></h2>
+    <div class="details">
+      <%= number_to_currency(product.price) %>
+      <% if product.released_at %>
+        | Released <%= product.released_at.strftime("%B %e, %Y") %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+</div>

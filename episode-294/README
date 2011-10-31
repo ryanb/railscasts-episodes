@@ -1,0 +1,8 @@
+RailsCasts Episode #294: Playing with PJAX
+
+http://railscasts.com/episodes/294-playing-with-pjax
+
+Commands used in episode
+
+  mkdir -p vendor/assets/javascripts
+  curl https://raw.github.com/defunkt/jquery-pjax/master/jquery.pjax.js > vendor/assets/javascripts/jquery.pjax.js

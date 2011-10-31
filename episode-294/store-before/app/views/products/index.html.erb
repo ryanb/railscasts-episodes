@@ -1,0 +1,34 @@
+<% content_for :title, @product ? @product.name : "Products" %>
+
+<div class="template_time">Template random: <strong><%= rand(900)+100 %></strong></div>
+
+<h1>Products</h1>
+
+<% for product in @products %>
+  <div class="product">
+    <h2>
+      <%= link_to product.name, :product_id => product %>
+      <span class="price"><%= number_to_currency(product.price) %></span>
+    </h2>
+  </div>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>
+
+<% if @product %>
+<div id="product_details">
+  <h3><%= @product.name %></h3>
+  <dl>
+    <dt>Price:</dt>
+    <dd><%= number_to_currency(@product.price) %></dd>
+    <dt>Released:</dt>
+    <dd><%= @product.released_at.strftime("%B %e, %Y") %></dd>
+    <dt>Category:</dt>
+    <dd><%= @product.category %></dd>
+  </dl>
+  <p class="actions">
+    <%= link_to "Edit", edit_product_path(@product) %> |
+    <%= link_to "Destroy", @product, method: :delete, confirm: "Are you sure?" %>
+  </p>
+</div>
+<% end %>

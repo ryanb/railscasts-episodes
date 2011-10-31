@@ -1,0 +1,8 @@
+RailsCasts Episode #295: Sharing Mustache Templates
+
+http://railscasts.com/episodes/295-sharing-mustache-templates
+
+Commands used in episode
+
+  mkdir -p vendor/assets/javascripts
+  curl https://raw.github.com/janl/mustache.js/master/mustache.js > vendor/assets/javascripts/mustache.js
