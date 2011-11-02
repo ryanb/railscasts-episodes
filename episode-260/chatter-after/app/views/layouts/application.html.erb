@@ -3,6 +3,7 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
     <%= javascript_include_tag :defaults, "http://localhost:9292/faye.js" %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
