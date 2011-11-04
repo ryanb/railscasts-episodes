@@ -1,0 +1,23 @@
+<h1>Order #<%= @order.order_number %></h1>
+
+<table id="line_items">
+  <tr>
+    <th>Product</th>
+    <th>Qty</th>
+    <th class="price">Unit Price</th>
+    <th class="price">Full Price</th>
+  </tr>
+  <% @order.line_items.each do |line_item| %>
+    <tr class="<%= cycle :odd, :even %>">
+      <td><%= line_item.name %></td>
+      <td class="qty"><%= line_item.quantity %></td>
+      <td class="price"><%= number_to_currency(line_item.unit_price) %></td>
+      <td class="price"><%= number_to_currency(line_item.full_price) %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td class="total price" colspan="4">
+      Total: <%= number_to_currency @order.total_price %>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,9 @@
+= RailsCasts Example Application
+
+Run these commands to try it out.
+
+  bundle
+  rake db:setup
+  rails s
+
+This example requires Ruby 1.9.2

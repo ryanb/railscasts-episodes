@@ -1,0 +1,37 @@
+#line_items {
+  border: solid 1px #666;
+  border-collapse: collapse;
+  margin: 10px 0;
+
+  th {
+    font-size: 10px;
+    color: #FFF;
+    background-color: #404C99;
+    padding: 4px 8px;
+    padding-bottom: 4px;
+    text-align: left;
+  }
+
+  td {
+    padding: 6px 12px;
+  }
+  .even td {
+    background-color: #E3E6FF;
+  }
+  .odd td {
+    background-color: #D1D8F6;
+  }
+
+  .price {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .qty {
+    text-align: center;
+  }
+
+  .total {
+    border-top: solid 1px #6D74C7;
+  }
+}
