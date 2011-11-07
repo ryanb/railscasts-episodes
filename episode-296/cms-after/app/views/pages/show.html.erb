@@ -1,0 +1,15 @@
+<div id="header">
+  <h1><span id="page_name" class="mercury-region" data-type="editable"><%= raw @page.name %></span></h1>
+  <ul id="navigation">
+  <% Page.all.each do |page| %>
+    <li><%= link_to_unless_current page.name, page %></li>
+  <% end %>
+  </ul>
+</div>
+
+<div class="content">
+  <div id="page_content" class="mercury-region" data-type="editable">
+    <%= raw @page.content %>
+  </div>
+  <p><%= link_to "Edit Page", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_page_path(@page)} %></p>
+</div>

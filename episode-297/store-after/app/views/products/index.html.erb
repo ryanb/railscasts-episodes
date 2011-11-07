@@ -1,0 +1,12 @@
+<div class="new_member_link"><%= link_to "New Member", new_member_path %></div>
+
+<h1>Products</h1>
+
+<div id="products" data-json-url="<%= products_url(:format => :json) %>">
+<% @products.each do |product| %>
+  <%= render "product", :mustache => product.for_mustache %>
+<% end %>
+</div>
+<script type="text/html" id="product_template">
+  <%= render "product" %>
+</script>

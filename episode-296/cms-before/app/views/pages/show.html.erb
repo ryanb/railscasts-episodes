@@ -1,0 +1,14 @@
+<div id="header">
+  <h1><%= raw @page.name %></h1>
+  <ul id="navigation">
+  <% Page.all.each do |page| %>
+    <li><%= link_to_unless_current page.name, page %></li>
+  <% end %>
+  </ul>
+</div>
+
+<div class="content">
+  <%= raw @page.content %>
+
+  <p>TODO: add "Edit Page" link</p>
+</div>

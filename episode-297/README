@@ -1,0 +1,14 @@
+RailsCasts Episode #297: Running JavaScript in Ruby
+
+http://railscasts.com/episodes/297-running-javascript-in-ruby
+
+Commands used in the Rails Console
+
+  c = V8::Context.new
+  c.eval('1 + 2')
+  c[:num] = 3
+  c.eval('num * num')
+  c.eval('math = {square: function(n) { return n*n }}')
+  c[:math].square(5)
+  c[:square] = lambda { |n| n*n }
+  c.eval('square(4)')

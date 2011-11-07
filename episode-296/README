@@ -1,0 +1,10 @@
+RailsCasts Episode #296: Mercury Editor
+
+http://railscasts.com/episodes/296-mercury-editor
+
+Commands used in episode
+
+  bundle
+  rails g mercury:install
+  rake mercury_engine:install:migrations
+  rake db:migrate

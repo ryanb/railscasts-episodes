@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    <title>Mercury Editor</title>
+    <%= stylesheet_link_tag    'mercury', 'mercury_overrides' %>
+    <%= javascript_include_tag 'mercury' %>
+  </head>
+  <body>
+    <% if Rails.application.config.respond_to?(:mercury_config) %>
+      <%= javascript_tag("jQuery.extend(Mercury.config, #{Rails.application.config.mercury_config});") %>
+    <% end -%>
+
+    <script type="text/javascript">
+      var saveUrl = null;
+      var options = {
+        saveStyle: 'form',  // 'form', or 'json' (default json)
+        saveMethod: null, // 'POST', or 'PUT', (create, vs. update -- default POST)
+        visible: null     // if the interface should start visible or not (default true)
+      };
+      new Mercury.PageEditor(saveUrl, options);
+    </script>
+  </body>
+</html>
