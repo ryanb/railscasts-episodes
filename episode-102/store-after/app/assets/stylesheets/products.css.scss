@@ -1,0 +1,25 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ul.ui-autocomplete {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: solid 1px #999;
+  cursor: default;
+  li {
+    background-color: #FFF;
+    border-top: solid 1px #DDD;
+    margin: 0;
+    padding: 0;
+    a {
+      color: #000;
+      display: block;
+      padding: 3px;
+    }
+    a.ui-state-hover, a.ui-state-active {
+      background-color: #FFFCB2;
+    }
+  }
+}

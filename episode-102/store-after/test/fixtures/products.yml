@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  price: 9.99
+  category_d: 123
+
+two:
+  name: MyString
+  price: 9.99
+  released_at: 2011-10-30 08:53:04
+  category_d: 123

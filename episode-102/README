@@ -1,0 +1,9 @@
+RailsCasts Episode #102: Auto-Complete Association (revised)
+
+http://railscasts.com/episodes/102-auto-complete-association-revised
+
+Ruby 1.9.2 or later required to run example.
+
+Commands used in episode
+
+  rails g controller categories

@@ -1,0 +1,17 @@
+<%= form_for(@product) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :category_name %><br />
+    <%= f.text_field :category_name, data: {autocomplete_source: categories_path} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
