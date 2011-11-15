@@ -1,0 +1,11 @@
+RailsCasts Episode #298: Getting Started with Spree
+
+http://railscasts.com/episodes/298-getting-started-with-spree
+
+Commands used in episode
+
+  brew install imagemagick
+  rails new store
+  bundle
+  rails g spree:site
+  rake db:bootstrap
