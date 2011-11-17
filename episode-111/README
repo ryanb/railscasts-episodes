@@ -1,0 +1,11 @@
+RailsCasts Episode #111: Advanced Search Form (revised)
+
+http://railscasts.com/episodes/111-advanced-search-form-revised
+
+Ruby 1.9.2 or later required to run example.
+
+Commands used in episode
+
+  rails g model search keywords:string category_id:integer min_price:decimal max_price:decimal
+  rake db:migrate
+  rails g controller searches

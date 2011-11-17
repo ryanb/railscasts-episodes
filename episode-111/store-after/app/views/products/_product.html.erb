@@ -1,0 +1,9 @@
+<div class="product">
+  <h2><%= link_to product.name, product %></h2>
+  <div class="details">
+    <%= number_to_currency(product.price) %>
+    <% if product.category %>
+      | Category: <%= product.category.name %>
+    <% end %>
+  </div>
+</div>

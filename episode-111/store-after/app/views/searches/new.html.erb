@@ -1,0 +1,18 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :min_price, "Price Range" %><br />
+    <%= f.text_field :min_price, size: 10 %> -
+    <%= f.text_field :max_price, size: 10 %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
