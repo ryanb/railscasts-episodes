@@ -1,0 +1,12 @@
+RailsCasts Episode #301: Extracting a Ruby Gem
+
+http://railscasts.com/episodes/301-extracting-a-ruby-gem
+
+Commands used in episode
+
+  bundle gem url_formatter
+  bundle
+  echo "--color" > .rspec
+  mkdir -p spec/url_formatter
+  touch spec/spec_helper.rb
+  rake
