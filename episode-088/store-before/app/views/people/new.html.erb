@@ -1,0 +1,17 @@
+<h1>New Person</h1>
+
+<%= form_for @person do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :country_id %><br />
+    <%= f.collection_select :country_id, Country.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :state_id, "State or Province" %><br />
+    <%= f.collection_select :state_id, State.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
