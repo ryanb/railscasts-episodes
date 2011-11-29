@@ -1,0 +1,23 @@
+<h1>User Profile</h1>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+<p>
+  <b>Gender:</b>
+  <%= @user.gender %>
+</p>
+<p>
+  <b>Public profile:</b>
+  <%= @user.public_profile %>
+</p>
+<p>
+  <%= @user.bio %>
+</p>
+
+<%= link_to 'Edit Profile', edit_user_path(@user) %>

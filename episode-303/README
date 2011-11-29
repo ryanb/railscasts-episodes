@@ -1,0 +1,12 @@
+RailsCasts Episode #303: Publishing a Gem
+
+http://railscasts.com/episodes/303-publishing-a-gem
+
+Commands used in episode
+
+  git status
+  git add .
+  git commit -m "initial commit"
+  git remote add origin git@github.com:ryanb/url_formatter.git
+  git push -u origin master
+  rake release
