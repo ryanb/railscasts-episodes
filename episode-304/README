@@ -1,0 +1,11 @@
+RailsCasts Episode #304: Omniauth Identity
+
+http://railscasts.com/episodes/304-omniauth-identity
+
+Require Ruby 1.9.2 or later to run example.
+
+Commands used in episode
+
+  rails g model identity name:string email:string password_digest:string
+  rake db:migrate
+  rails g controller identities
