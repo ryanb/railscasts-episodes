@@ -1,0 +1,12 @@
+Railscasts Episode #120: Thinking Sphinx (revised)
+
+http://railscasts.com/episodes/120-thinking-sphinx-revised
+
+Commands used in episide
+
+  rake ts:index
+  rake ts:start
+  rake ts:rebuild
+  rake ts:reindex
+
+Require Ruby 1.9.2 or higher.

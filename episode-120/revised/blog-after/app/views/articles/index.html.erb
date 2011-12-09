@@ -1,0 +1,22 @@
+<h1>Articles</h1>
+
+<%= form_tag articles_path, method: :get do %>
+  <div class="field">
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", name: nil %>
+  </div>
+<% end %>
+
+<div id="articles">
+<% for article in @articles %>
+  <h2>
+    <%= link_to article.name, article %>
+    <span class="comments">(<%= pluralize(article.comments.size, 'comment') %>)</span>
+  </h2>
+  <div class="date">
+    by <%= article.author.first_name %> <%= article.author.last_name %>
+    on <%= article.published_at.strftime('%b %d, %Y') %>
+  </div>
+  <div class="content"><%= simple_format(article.content) %></div>
+<% end %>
+</div>
