@@ -1,0 +1,11 @@
+RailsCasts Episode #306: ElasticSearch Part 1
+
+http://railscasts.com/episodes/306-elasticsearch-part-1
+
+Commands used in episode
+
+  brew install elasticsearch
+  elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.18.5/config/elasticsearch.yml
+  rake db:setup
+
+Require Ruby 1.9.2 or later to run example.

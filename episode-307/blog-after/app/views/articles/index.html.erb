@@ -1,0 +1,40 @@
+<h1>Articles</h1>
+
+<%= form_tag articles_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", name: nil %>
+  </p>
+<% end %>
+
+<div id="facets">
+  <h3>Authors</h3>
+  <ul>
+    <% @articles.facets['authors']['terms'].each do |facet| %>
+      <li>
+        <%= link_to_unless_current Author.find(facet['term']).name, params.merge(author_id: facet['term']) %>
+        <% if params[:author_id] == facet['term'].to_s %>
+          (<%= link_to "remove", author_id: nil %>)
+        <% else %>
+          (<%= facet['count'] %>)
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="articles">
+<% @articles.each do |article| %>
+  <h2>
+    <%= link_to article.name, article %>
+    <span class="comments">(<%= pluralize(article.comments_count, 'comment') %>)</span>
+  </h2>
+  <div class="info">
+    by <%= article.author_name %>
+    on <%= article.published_at.to_time.strftime('%b %d, %Y') %>
+  </div>
+  <div class="content"><%= article.content %></div>
+<% end %>
+</div>
+
+<%= will_paginate @articles %>

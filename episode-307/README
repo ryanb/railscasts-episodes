@@ -1,0 +1,9 @@
+RailsCasts Episode #307: ElasticSearch Part 2
+
+http://railscasts.com/episodes/307-elasticsearch-part-2
+
+Commands used in episode
+
+  rake environment tire:import CLASS=Article FORCE=true
+
+Require Ruby 1.9.2 or later to run example.
