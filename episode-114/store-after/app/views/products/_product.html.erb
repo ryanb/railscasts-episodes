@@ -1,0 +1,7 @@
+<div class="product">
+  <h2><%= link_to product.name, product %></h2>
+  <div class="details">
+    <%= number_to_currency(product.price) %> |
+    Released <%= product.released_at.strftime("%B %e, %Y") %>
+  </div>
+</div>
