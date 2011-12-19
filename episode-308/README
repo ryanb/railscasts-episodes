@@ -1,0 +1,12 @@
+RailsCasts Episode #308: Oh My ZSH
+
+http://railscasts.com/episodes/308-oh-my-zsh
+
+Commands used in episode
+
+  ps
+  wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  mate ~/.zshrc
+  cat ~/.bash_profile >> ~/.zshrc
+  mate ~/.oh-my-zsh

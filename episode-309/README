@@ -1,0 +1,14 @@
+RailsCasts Episode #309: A Shell-Scripting Story
+
+http://railscasts.com/episodes/309-a-shell-scripting-story
+
+Commands used in episode
+
+  rake --tasks | cut -d " " -f 2
+  unfunction _rake; . ~/.zshrc
+  ls -t .rake_tasks\~ Rakefile **/*.rake | head -n 1
+  touch Rakefile
+  find . -name '*.rb' -mtime -3 | xargs grep production
+  brew install ack
+  find . -name '*.rb' -mtime -3 | xargs sed -i 's/production/staging/'
+  # other commands: sort tr comm cut paste diff patch
