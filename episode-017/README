@@ -1,0 +1,12 @@
+RailsCasts Episode #17: HABTM Checkboxes
+
+http://railscasts.com/episodes/17-habtm-checkboxes
+
+Commands used in console
+
+  p = Product.first
+  p.category_ids
+  p.category_ids = [1, 2]
+  p.categories
+
+Requires Ruby 1.9.2 or higher.
