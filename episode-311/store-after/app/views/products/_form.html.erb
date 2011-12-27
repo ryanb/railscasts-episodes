@@ -1,0 +1,13 @@
+<%= labeled_form_for @product do |f| %>
+  <%= f.error_messages %>
+
+  <%= f.text_field :name %>
+  <%= f.text_field :price, label: "Unit Price" %>
+  <%= f.text_area :description, rows: 8 %>
+  <%= f.check_box :discontinued %>
+  
+  <h2>Categories</h2>
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+
+  <%= f.submit %>
+<% end %>
