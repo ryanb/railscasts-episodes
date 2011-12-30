@@ -1,0 +1,11 @@
+RailsCasts Episode #164: Cron in Ruby (revised)
+
+http://railscasts.com/episodes/164-cron-in-ruby-revised
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  bundle
+  bundle exec wheneverize
+  bundle exec whenever
