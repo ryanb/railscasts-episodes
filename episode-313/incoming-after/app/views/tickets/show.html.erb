@@ -1,0 +1,8 @@
+<div class="ticket">
+  <h2>#<%= @ticket.id %>. <%= @ticket.subject %></h2>
+  <p>From: <%= @ticket.from %></p>
+  <%= simple_format @ticket.body %>
+</div>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

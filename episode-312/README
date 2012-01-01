@@ -1,0 +1,15 @@
+RailsCasts Episode #312: Sending HTML Email
+
+http://railscasts.com/episodes/312-sending-html-email
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  rails new mailit
+  cd mailit
+  rails g mailer newsletter_mailer weekly
+  bundle
+  rails c
+
+  NewsletterMailer.weekly("foo@example.com").deliver

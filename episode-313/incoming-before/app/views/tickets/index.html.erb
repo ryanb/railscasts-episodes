@@ -1,0 +1,11 @@
+<h1>Support Tickets</h1>
+
+<% @tickets.each do |ticket| %>
+  <div class="ticket">
+    <h2>#<%= ticket.id %>. <%= ticket.subject %></h2>
+    <p>From: <%= ticket.from %></p>
+    <%= simple_format ticket.body %>
+  </div>
+<% end %>
+
+<%= link_to 'New Ticket', new_ticket_path %>
