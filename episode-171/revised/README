@@ -1,0 +1,13 @@
+RailsCasts Episode #171: Delayed Job (revised)
+
+http://railscasts.com/episodes/171-delayed-job-revised
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  rails g delayed_job:active_record
+  rake db:migrate
+  rake jobs:work
+  script/delayed_job start
+  script/delayed_job stop

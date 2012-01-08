@@ -1,0 +1,14 @@
+<h1>Newsletters</h1>
+
+<% @newsletters.each do |newsletter| %>
+  <div class="newsletter">
+    <h2><%= newsletter.subject %></h2>
+    <% if newsletter.delivered_at.present? %>
+      Delivered on <%= newsletter.delivered_at.strftime("%B %d, %Y at %I:%M:%S") %><br />
+    <% end %>
+    <%= link_to "View", newsletter %> |
+    <%= link_to "Deliver", deliver_newsletter_path(newsletter), method: :post %>
+  </div>
+<% end %>
+
+<p><%= link_to "New Newsletter", new_newsletter_path %></p>

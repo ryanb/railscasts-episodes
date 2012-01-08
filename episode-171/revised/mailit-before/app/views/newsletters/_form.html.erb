@@ -1,0 +1,19 @@
+<%= form_for(@newsletter) do |f| %>
+  <% if @newsletter.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@newsletter.errors.count, "error") %> prohibited this newsletter from being saved:</h2>
+      <ul>
+      <% @newsletter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
