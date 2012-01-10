@@ -1,0 +1,16 @@
+<h1>Your To Do List</h1>
+
+<p>Signed in as <strong><%= current_user.name %></strong>. <%= link_to "switch user", login_path %></p>
+
+<%= form_for Task.new do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Add Task" %>
+<% end %>
+
+<ul>
+  <% current_user.tasks.each do |task| %>
+    <li><%= task.name %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Send to Phone", new_phone_request_path %></p>

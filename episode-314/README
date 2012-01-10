@@ -1,0 +1,16 @@
+RailsCasts Episode #314: Pretty URLs with FriendlyId
+
+http://railscasts.com/episodes/314-pretty-urls-with-friendlyid
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  rails g migration add_slug_to_articles slug:string
+  rake db:migrate
+  rails c
+  rails g friendly_id
+
+Commands used in console
+
+  Article.find_each(&:save)

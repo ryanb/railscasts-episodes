@@ -1,0 +1,9 @@
+<h1>Send to Phone</h1>
+
+<%= form_tag phone_requests_path do %>
+  <div class="field">
+    <%= label_tag :phone_number %><br />
+    <%= text_field_tag :phone_number %>
+  </div>
+  <div class="actions"><%= submit_tag "Send to Phone" %></div>
+<% end %>

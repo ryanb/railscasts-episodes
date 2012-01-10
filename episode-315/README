@@ -1,0 +1,20 @@
+RailsCasts Episode #315: Rollout and Degrade
+
+http://railscasts.com/episodes/315-rollout-and-degrade
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  git checkout phone
+  git diff
+  rails c
+
+Commands used in console
+
+  $rollout.activate_group(:phone, :admin)
+  $rollout.activate_group(:phone, :all)
+  $rollout.activate_user(:phone, User.find_by_name("ryan"))
+  $rollout.activate_percentage(:phone, 20)
+  $rollout.deactivate_all(:phone)
+  Rollout.create! name: "phone", group: "admin"
