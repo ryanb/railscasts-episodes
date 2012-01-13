@@ -1,0 +1,8 @@
+<h1><%= @blog.name %></h1>
+
+<div id="articles">
+<% @blog.articles.each do |article| %>
+  <h2><%= link_to article.name, article %></h2>
+  <%= simple_format(article.content) %>
+<% end %>
+</div>
