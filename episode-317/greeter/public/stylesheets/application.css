@@ -1,0 +1,14 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana;
+  font-size: 14px;
+}
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+a { color: #0000FF; }

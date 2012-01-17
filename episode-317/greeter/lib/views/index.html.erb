@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeter</title>
+    <link rel="stylesheet" href="/stylesheets/application.css" type="text/css" charset="utf-8">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Hello <%= greet_name %>!</h1>
+      <form method="post" action="/change">
+        <input name="name" type="text">
+        <input type="submit" value="Change Name">
+      </form>
+    </div>
+  </body>
+</html>

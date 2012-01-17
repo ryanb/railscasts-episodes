@@ -1,0 +1,11 @@
+RailsCasts Episode #316: Private Pub
+
+http://railscasts.com/episodes/316-private-pub
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  bundle
+  rails g private_pub:install
+  rackup private_pub.ru -s thin -E production

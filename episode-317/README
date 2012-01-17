@@ -1,0 +1,11 @@
+RailsCasts Episode #317: Rack App from Scratch
+
+http://railscasts.com/episodes/317-rack-app-from-scratch
+
+Requires Ruby 1.9.2 or higher.
+
+Commands used in episode
+
+  gem install rack
+  rackup -Ilib
+  ruby greeter_test.rb
