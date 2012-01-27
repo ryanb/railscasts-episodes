@@ -1,0 +1,12 @@
+Railscasts Episode #150: Rails Metal (revised)
+
+http://railscasts.com/episodes/150-rails-metal-revised
+
+Commands used in episode
+
+  rake middleware
+  rails s -e production -d
+  ab -n 100 -r http://localhost:3000/processes/old_list
+  ab -n 100 -r http://localhost:3000/processes/list
+
+Requires Ruby 1.9.2 to run code.
