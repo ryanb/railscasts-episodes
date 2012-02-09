@@ -1,0 +1,93 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+form input {
+  font-size: 20px;
+}
+form input[type='text'] {
+  width: 535px;
+}
+form input[type='submit'], #draw {
+  -webkit-appearance: caret;
+	font-size: 14px;
+  font-size: 13px;
+  padding: 5px 10px 6px 10px;
+  font-weight: bold;
+  border: 1px solid #466A98;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #FFF;
+  background: #24882B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#32BE39), to(#247B28));
+  background: -moz-linear-gradient(top,  #32BE39,  #247B28);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#32BE39', endColorstr='#247B28');
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #036;
+  text-align: middle;
+  vertical-align: top;
+}
+
+#draw {
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  border-top: solid 1px #CCC;
+}
+
+li {
+  border-bottom: solid 1px #CCC;
+  padding: 10px 10px;
+  font-size: 16px;
+  position: relative;
+  .winner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #999;
+    &.highlight {
+      color: #DD0000;
+      font-weight: bold;
+    }
+  }
+}
