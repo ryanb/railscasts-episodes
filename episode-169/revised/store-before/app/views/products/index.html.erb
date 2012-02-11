@@ -1,0 +1,19 @@
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+    <div class="product">
+      <h2>
+        <%= link_to product.name, product %>
+        <span class="price"><%= number_to_currency(product.price) %></span>
+      </h2>
+
+      <% if admin? %>
+        <div class="admin">
+          <%= link_to "Edit", edit_product_path(product) %> |
+          <%= link_to "Destroy", product, method: "delete", confirm: "Are you sure?" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

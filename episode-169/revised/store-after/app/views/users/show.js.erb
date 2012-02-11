@@ -1,0 +1,4 @@
+<% if admin? %>
+  $('.admin').show();
+<% end %>
+$('#container').prepend('<%=j render("layouts/dynamic_header") %>');
