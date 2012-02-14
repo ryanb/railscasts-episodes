@@ -1,0 +1,5 @@
+<h1>Products</h1>
+
+<%= content_tag "div", id: "products", data: {products: Product.limit(10)} do %>
+  Loading products...
+<% end %>

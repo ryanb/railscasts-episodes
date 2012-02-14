@@ -1,0 +1,10 @@
+<h1>Raffler</h1>
+
+<form id="new_entry">
+  <input type="text" name="name" id="new_entry_name">
+  <input type="submit" value="Add">
+</form>
+
+<ul id="entries"></ul>
+
+<button id="draw">Draw Winner</button>
