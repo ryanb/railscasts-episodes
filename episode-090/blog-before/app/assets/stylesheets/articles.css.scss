@@ -1,0 +1,24 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#recent_articles {
+  padding: 15px 12px;
+  padding-right: 20px;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 200px;
+  margin-top: 10px;
+  h3 {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 3px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 2px 0;
+      margin-left: 20px;
+    }
+  }
+}

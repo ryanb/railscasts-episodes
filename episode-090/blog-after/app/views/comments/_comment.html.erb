@@ -1,0 +1,5 @@
+<div class="comment">
+  <strong><%= comment.name %></strong>
+  <em>on <%= comment.created_at.strftime('%b %d, %Y') %></em>
+  <%= simple_format comment.content %>
+</div>
