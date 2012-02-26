@@ -1,0 +1,6 @@
+<h1><%= @article.name %></h1>
+<%= @article.content %>
+<p>
+  <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Browse Articles", articles_path %>
+</p>
