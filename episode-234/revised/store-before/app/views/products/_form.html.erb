@@ -1,0 +1,52 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :released_on %><br />
+    <%= f.date_select :released_on %>
+  </div>
+  <div class="field">
+    <%= f.check_box :discontinued %>
+    <%= f.label :discontinued %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br />
+    <%= f.radio_button :rating, 1 %> 1
+    <%= f.radio_button :rating, 2 %> 2
+    <%= f.radio_button :rating, 3 %> 3
+    <%= f.radio_button :rating, 4 %> 4
+    <%= f.radio_button :rating, 5 %> 5
+  </div>
+  <div class="field">
+    <%= f.label :publisher_id %><br />
+    <%= f.collection_select :publisher_id, Publisher.all, :id, :name, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= hidden_field_tag "product[category_ids][]", nil %>
+    <% Category.all.each do |category| %>
+      <%= check_box_tag "product[category_ids][]", category.id, @product.category_ids.include?(category.id), id: dom_id(category) %>
+      <%= label_tag dom_id(category), category.name %><br />
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

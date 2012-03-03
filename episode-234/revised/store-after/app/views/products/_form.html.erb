@@ -1,0 +1,12 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name %>
+  <%= f.input :price, hint: "price should be in USD" %>
+  <%= f.input :released_on, label: "Release Date" %>
+  <%= f.input :discontinued %>
+  <%= f.input :rating, collection: 1..5, as: :radio_buttons %>
+  <%= f.association :publisher %>
+  <%= f.association :categories, as: :check_boxes %>
+  <%= f.error :base %>
+  <%= f.button :submit %>
+<% end %>

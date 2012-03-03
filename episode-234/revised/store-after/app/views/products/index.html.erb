@@ -1,0 +1,14 @@
+<h1>Games</h1>
+
+<% @products.each do |product| %>
+  <div class="product">
+    <h2><%= link_to product.name, product %></h2>
+    <div class="details">
+      <%= number_to_currency(product.price) %> |
+      <%= product.categories.map(&:name).join(", ") %> |
+      <%= product.publisher.name %>
+    </div>
+  </div>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>

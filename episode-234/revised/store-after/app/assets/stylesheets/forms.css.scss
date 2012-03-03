@@ -1,0 +1,47 @@
+.simple_form {
+  $indent: 120px;
+  label {
+    float: left;
+    width: $indent - 20px;
+    text-align: right;
+    margin: 2px 10px;
+    &.radio, &.checkbox {
+      float: none;
+      margin: 0;
+      width: auto;
+      text-align: left;
+    }
+    &.checkbox {
+      display: block;
+      margin-left: $indent;
+    }
+    &.radio {
+      margin-right: 10px;
+    }
+  }
+  div.input {
+    margin-bottom: 10px;
+  }
+  input.radio_buttons, input.check_boxes {
+    margin-right: 5px;
+  }
+  .btn {
+    margin-left: $indent;
+  }
+  .alert-error {
+    color: #D00;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .hint, .error {
+    clear: left;
+    margin-left: $indent;
+    font-size: 12px;
+    color: #D00;
+    display: block;
+  }
+  .hint {
+    color: #555;
+    font-style: italic;
+  }
+}
