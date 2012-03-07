@@ -1,0 +1,12 @@
+.project {
+  border: solid 1px #AAA;
+  margin: 20px 0;
+  padding: 7px 12px;
+  
+  &:hover { background-color: #F8FCCF; }
+  
+  h2 {
+    margin: 0;
+    a { text-decoration: none; }
+  }
+}

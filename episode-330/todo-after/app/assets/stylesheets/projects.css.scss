@@ -1,0 +1,20 @@
+.project {
+  border: solid 1px #AAA;
+  margin: 20px 0;
+  padding: 7px 12px;
+  @include border-radius(6px);
+  @include transition(all, 500ms, ease-in-out);
+  
+  &:hover { background-color: #F8FCCF; }
+  
+  h2 {
+    margin: 0;
+    a { text-decoration: none; }
+  }
+}
+
+.new_project {
+  @include button(simple, #3FB344);
+  text-decoration: none;
+  font-size: 16px;
+}

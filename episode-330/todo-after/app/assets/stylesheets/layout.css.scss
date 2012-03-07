@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  font-size: 14px;
+  font-family: $verdana;
+}
+
+#header {
+  color: #FFF;
+  padding: 15px 100px;
+  font-size: 30px;
+  font-weight: bold;
+  @include linear-gradient(#777, #444);
+  @include box-shadow(0 0 6px 3px #000);
+}
+
+#container {
+  margin: 0 100px;
+}
+
+a {
+  color: #2D6DD2;
+}

@@ -1,0 +1,37 @@
+<% ab_test "signup", "long", "short", "bold" do |style| %>
+<div class="signup_<%= style %>">
+  <h1>Sign Up<%= " for FREE" if style == "bold" %></h1>
+
+  <% if style == "long" %>
+    <p>Fill out the sign up form below to access the great features of this site. Please enter a valid email address because further instructions will be emailed to you after signing up.</p>
+  <% end %>
+
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <ul class="errors">
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password, "New Password" %>
+      <%= f.password_field :password %>
+    </div>
+    <% unless style == "short" %>
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit "Sign Up" %>
+    </div>
+  <% end %>
+</div>
+<% end %>
