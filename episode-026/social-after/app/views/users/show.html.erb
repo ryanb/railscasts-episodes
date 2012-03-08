@@ -1,0 +1,22 @@
+<h1>User Profile</h1>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+<p>
+  <b>Admin:</b>
+  <%= @user.admin? ? "Yes" : "No" %>
+</p>
+
+<p><%= link_to "Edit Profile", edit_user_path(@user) %></p>
+
+<h3><%= pluralize @user.projects.size, "Project" %></h3>
+
+<ul>
+<% @user.projects.each do |project| %>
+  <li><%= project.name %></li>
+<% end %>
+</ul>
+
+<%= link_to "New Project", new_project_path %>
