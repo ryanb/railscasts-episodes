@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      pianos:
+        title: Pianos
+    pianos:
+      admin:
+        pianos:
+          actions:
+            create_new: Lag en ny Piano
+            reorder: Endre rekkefølgen på Pianos
+            reorder_done: Ferdig å endre rekkefølgen Pianos
+          records:
+            title: Pianos
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Pianos enda. Klikk på "Lag en ny Piano" for å legge til din første piano.
+          piano:
+            view_live_html: Vis hvordan denne piano ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne piano
+            delete: Fjern denne piano permanent
+      pianos:
+        show:
+          other: Andre Pianos
+  activerecord:
+    attributes:
+      'refinery/pianos/piano':
+        name: Name
+        dimensions: Dimensions
+        manufactured_on: Manufactured On
+        upright: Upright
+        photo: Photo
+        description: Description

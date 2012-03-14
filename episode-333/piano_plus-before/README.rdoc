@@ -1,0 +1,9 @@
+= RailsCasts Example Application
+
+Run these commands to try it out.
+
+  bundle
+  rake db:setup
+  rails s
+
+See db/development.sqlite3.example for a copy of the database.

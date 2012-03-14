@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      pianos:
+        title: Pianos
+#        article: masculino/femenino
+    pianos:
+      admin:
+        pianos:
+          actions:
+            create_new: Crear nuevo piano
+            reorder: Reordenar pianos
+            reorder_done: Reordenación de pianos completada
+          records:
+            title: Pianos
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay pianos todavía. Pulsa en "Crear nuevo Piano" para crear tu primer piano.
+          piano:
+            view_live_html: Ver este piano como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este piano
+            delete: Borrar este piano para siempre
+      pianos:
+        show:
+          other: Otros pianos
+  activerecord:
+    attributes:
+      'refinery/pianos/piano':
+        name: Name
+        dimensions: Dimensions
+        manufactured_on: Manufactured On
+        upright: Upright
+        photo: Photo
+        description: Description

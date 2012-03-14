@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Pianos::Admin::PianosController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.pianos_admin_pianos_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_pianos_admin_piano_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Pianos::Admin::PianosController.sortable? && ::Refinery::Pianos::Piano.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Pianos"),
+                 refinery.pianos_admin_pianos_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Pianos"),
+                 refinery.pianos_admin_pianos_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

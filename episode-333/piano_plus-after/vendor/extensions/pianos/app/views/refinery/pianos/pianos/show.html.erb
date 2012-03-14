@@ -1,0 +1,16 @@
+<section id="body_content">
+  <section id="body">
+    <div id="piano">
+      <%= image_fu @piano.photo, "400x400", class: "image-align-left" %>
+      <h1><%= @piano.name %></h1>
+      <p>
+        <b>Dimensions:</b> <%= @piano.dimensions %>
+      </p>
+      <p>
+        <b>Manufacture Date:</b> <%= @piano.manufactured_on.year %>
+      </p>
+      <%= raw @piano.description %>
+      <p class="back"><%= link_to "Back to Pianos", refinery.pianos_pianos_path %></p>
+    </div>
+  </section>
+</section>

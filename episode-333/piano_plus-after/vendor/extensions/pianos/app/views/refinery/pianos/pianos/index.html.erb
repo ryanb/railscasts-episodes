@@ -1,0 +1,14 @@
+<section id="body_content">
+  <section id="body">
+    <div id="pianos">
+      <% @pianos.each do |piano| %>
+      <div class="piano">
+        <%= image_fu piano.photo, "200x200", class: "image-align-#{cycle("left", "right")}" %>
+        <h2><%= piano.name %></h2>
+        <%=raw piano.description %>
+        <p class="more_info"><%= link_to "More Information", refinery.pianos_piano_path(piano) %></p>
+      </div>
+      <% end %>
+    </div>
+  </section>
+</section>

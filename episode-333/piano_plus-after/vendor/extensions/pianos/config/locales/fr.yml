@@ -1,0 +1,32 @@
+fr:
+  refinery:
+    plugins:
+      pianos:
+        title: Pianos
+    pianos:
+      admin:
+        pianos:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Piano
+            reorder: Réordonner les Pianos
+            reorder_done: Fin de réordonnancement des Pianos
+          records:
+            title: Pianos
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Piano. Cliquer sur "Créer un(e) nouve(au/l/lle) Piano" pour créer votre premi(er/ère) piano.'
+          piano:
+            view_live_html: Voir ce(t/tte) piano <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) piano
+            delete: Supprimer définitivement ce(t/tte) piano
+      pianos:
+        show:
+          other: Autres Pianos
+  activerecord:
+    attributes:
+      'refinery/pianos/piano':
+        name: Name
+        dimensions: Dimensions
+        manufactured_on: Manufactured On
+        upright: Upright
+        photo: Photo
+        description: Description
