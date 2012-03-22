@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby on Rails Screencasts - RailsCasts</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="top">
+      <div class="logo"><%= link_to image_tag("railscasts_logo.png", alt: "RailsCasts"), root_path %></div>
+      <div class="user_nav">
+        <%= link_to "Sign in through GitHub" %>
+      </div>
+      <ul id="subscribe" class="horizontal">
+        <li><a class="icons-itunes" href="/itunes"></a></li>
+        <li><a class="icons-twitter" href="/twitter"></a></li>
+        <li><a class="icons-facebook" href="/facebook"></a></li>
+        <li><a class="icons-rss" href="/rss"></a></li>
+      </ul>
+    </div>
+
+    <div id="nav_bar">
+      <ul class="nav horizontal">
+        <li><%= link_to "Browse Episodes" %></li>
+        <li><%= link_to "RailsCasts Pro" %></li>
+        <li><%= link_to "About" %></li>
+        <li><%= link_to "Feedback" %></li>
+      </ul>
+      <%= form_tag "/episodes", method: "get" do %>
+        <%= text_field_tag :search, params[:search], :size => 35 %>
+        <%= submit_tag "Search Episodes", :name => nil %>
+      <% end %>
+    </div>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, raw(msg), id: "flash_#{name}") %>
+    <% end %>
+
+    <div id="main">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <div class="inner">
+        &copy;<%= Date.today.year %> RailsCasts
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+= RailsCasts Example Application
+
+This is the nginx, Unicorn, PostgreSQL version. It is intended to be deployed to a VPS using the instructions in the show notes for episode 335.

@@ -1,0 +1,3 @@
+= RailsCasts Example Application
+
+This is the Apache, Phusion Passenger, MySQL version. It is intended to be deployed to a VPS using the alternate instructions in the show notes for episode 335.
