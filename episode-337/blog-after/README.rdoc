@@ -1,0 +1,3 @@
+= RailsCasts Example Application
+
+This project is used to demostrate setting up a VPS.

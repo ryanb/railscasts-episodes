@@ -1,0 +1,14 @@
+<h1>Browse Products</h1>
+
+<em>We have what you need at a great low price.</em>
+
+<div id="products">
+  <% @products.each do |product| %>
+    <div class="product">
+      <h2><%= link_to product.name, product %></h2>
+      <div class="details">
+        <%= number_to_currency(product.price) %>
+      </div>
+    </div>
+  <% end %>
+</div>
