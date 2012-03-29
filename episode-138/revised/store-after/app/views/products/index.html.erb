@@ -1,0 +1,15 @@
+<h1><%= t ".title" %></h1>
+
+<em><%= t ".description" %></em>
+
+<div id="products">
+  <% @products.each do |product| %>
+    <div class="product">
+      <h2><%= link_to product.name, product %></h2>
+      <div class="details">
+        <%= Product.human_attribute_name(:price) %>:
+        <%= number_to_currency(product.price) %>
+      </div>
+    </div>
+  <% end %>
+</div>

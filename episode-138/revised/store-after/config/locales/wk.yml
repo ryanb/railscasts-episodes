@@ -1,0 +1,9 @@
+wk:
+  products:
+    index:
+      title: "Wyaaaaaa Ruh"
+      description: "Huwaa muaa mumwa. Wua ga ma uma ahuma ooma."
+  activerecord:
+    attributes:
+      product:
+        price: "Aurhaa"
