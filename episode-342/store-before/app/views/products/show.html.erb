@@ -1,0 +1,18 @@
+<h1><%= @product.name %></h1>
+
+<p>
+  <b>Price:</b>
+  <%= number_to_currency @product.price %>
+</p>
+
+<p>
+  <b>Released on:</b>
+  <%= @product.released_on.strftime("%B %e, %Y") %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category %>
+</p>
+
+<%= link_to 'Back', products_path %>

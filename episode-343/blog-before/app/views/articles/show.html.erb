@@ -1,0 +1,24 @@
+<h1><%= @article.name %></h1>
+
+<p class="author"><em>by <%= @article.author.first_name %> <%= @article.author.last_name %></em></p>
+
+<%= simple_format @article.content %>
+
+<p><%= link_to "Back to Articles", articles_path %></p>
+
+<% unless @article.comments.empty? %>
+  <h2><%= pluralize(@article.comments.size, 'comment') %></h2>
+
+  <div id="comments">
+  <% for comment in @article.comments %>
+    <div class="comment">
+      <strong><%= comment.name %></strong>
+      <em>on <%= comment.created_at.strftime('%b %d, %Y') %></em>
+      <%= simple_format comment.content %>
+    </div>
+  <% end %>
+  </div>
+<% end %>
+
+<h3>Add your comment:</h3>
+<%= render "comments/form" %>
