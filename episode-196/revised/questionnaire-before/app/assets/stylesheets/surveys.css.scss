@@ -30,3 +30,22 @@
     margin-left: 25px;
   }
 }
+
+form > fieldset {
+  border: none;
+  border: solid 1px #CCC;
+  padding: 10px 15px;
+  margin: 15px 0;
+  fieldset {
+    border: none;
+    margin: 0;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+textarea {
+  height: 40px;
+  width: 350px;
+  margin-top: 3px;
+}
