@@ -1,0 +1,10 @@
+<h1>Surveys</h1>
+
+<% @surveys.each do |survey| %>
+  <div class="article">
+    <h2><%= link_to survey.name, survey %></h2>
+    <%= pluralize(survey.questions.size, "Question") %>
+  </div>
+<% end %>
+
+<p><%= link_to 'New Survey', new_survey_path %></p>
