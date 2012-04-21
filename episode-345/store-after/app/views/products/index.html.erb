@@ -1,0 +1,9 @@
+<h1>Products</h1>
+
+<% @products.each do |product| %>
+  <h2><%= link_to product.name, product %></h2>
+  Price: <%= number_to_currency product.price %>,
+  Category: <%= product.category %>
+<% end %>
+
+<p><%= link_to "New Product", new_product_path %></p>
