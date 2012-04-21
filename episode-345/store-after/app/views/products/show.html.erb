@@ -1,0 +1,25 @@
+<h1><%= @product.name %></h1>
+
+<p><b>Price:</b> <%= number_to_currency @product.price %></p>
+
+<% if @product.category.present? %>
+  <p><b>Category:</b> <%= @product.category %></p>
+<% end %>
+
+<% if @product.author.present? %>
+  <p><b>Author:</b> <%= @product.author %></p>
+<% end %>
+
+<% if @product.rating.present? %>
+  <p><b>Rated:</b> <%= @product.rating %></p>
+<% end %>
+
+<% if @product.runtime.present? %>
+  <p><b>Runtime:</b> <%= @product.runtime %> minutes</p>
+<% end %>
+
+<%= simple_format @product.description %>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back to Products', products_path %>
