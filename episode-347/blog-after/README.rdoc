@@ -1,0 +1,8 @@
+= RailsCasts Example Application
+
+This app is designed to be deployed using Rubber. You will need to fill in the access keys in rubber.yml and deploy using these commands.
+
+  bundle
+  cap rubber:create_staging
+
+Requires Ruby 1.9.2 or later to run.
