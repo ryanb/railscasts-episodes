@@ -1,0 +1,7 @@
+
+haproxy_monitor_port: 60001
+haproxy_admin_port: 9100
+
+roles:
+  haproxy:
+    packages: [haproxy]

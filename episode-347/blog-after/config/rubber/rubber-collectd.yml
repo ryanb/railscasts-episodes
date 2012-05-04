@@ -1,0 +1,11 @@
+
+rubber_collectd_runner: "script/collectd/collectd-runner.rb"
+collectd_graphite_plugin_version: 6107730c56b4ede27631
+collectd_syslog: daemon
+
+roles:
+  collectd:
+    packages: [collectd]
+
+role_dependencies:
+  common: [collectd]

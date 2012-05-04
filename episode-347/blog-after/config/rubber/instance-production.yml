@@ -1,0 +1,3 @@
+---
+- volumes: {}
+  static_ips: {}
