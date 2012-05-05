@@ -1,0 +1,24 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :author_tokens, "Authors" %><br />
+    <%= f.text_field :author_tokens, data: {load: @book.authors} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
