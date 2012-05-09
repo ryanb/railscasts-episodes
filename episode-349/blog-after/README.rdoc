@@ -1,0 +1,5 @@
+== Example RailsCasts Application
+
+This is an example of a slimmed down Rails application.
+
+Use "rails s" to run it - this assumes it is running on Rails 3.2.3 but does not enforce it because I removed the Gemfile.
