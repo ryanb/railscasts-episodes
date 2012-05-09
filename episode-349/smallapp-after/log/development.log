@@ -1,0 +1,72 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 18:38:05 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (5.5ms)
+Completed 200 OK in 163ms (Views: 18.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 18:38:21 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (0.3ms)
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 18:49:19 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (5.1ms)
+Completed 200 OK in 164ms (Views: 31.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 18:55:24 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (5.0ms)
+Completed 200 OK in 159ms (Views: 17.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:17:24 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (5.6ms)
+Completed 200 OK in 171ms (Views: 20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:17:46 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (0.3ms)
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:17:55 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (0.4ms)
+Completed 200 OK in 4ms (Views: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:36:32 -0700
+Processing by HelloController#world as HTML
+  Rendered hello/world.html.erb (24.1ms)
+Completed 200 OK in 38ms (Views: 38.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:37:08 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (5.3ms)
+Completed 200 OK in 165ms (Views: 18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:37:21 -0700
+Processing by HelloController#world as HTML
+  Rendered inline template (0.3ms)
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:37:37 -0700
+Processing by HelloController#world as HTML
+  Rendered hello/world.html.erb (19.2ms)
+Completed 200 OK in 33ms (Views: 32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-08 19:37:46 -0700
+Processing by HelloController#world as HTML
+  Rendered hello/world.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms)
