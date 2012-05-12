@@ -1,0 +1,11 @@
+<h1><%= @snippet.name %></h1>
+
+<p>
+  <strong>Language:</strong>
+  <%= @snippet.language.titleize %>
+</p>
+
+<%= raw Pygments.highlight(@snippet.code, lexer: @snippet.language) %>
+
+<%= link_to "Edit", edit_snippet_path(@snippet) %> |
+<%= link_to "New Snippet", new_snippet_path %>
