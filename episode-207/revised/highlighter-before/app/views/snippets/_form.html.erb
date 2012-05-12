@@ -1,0 +1,28 @@
+<%= form_for @snippet do |f| %>
+  <% if @snippet.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+      <ul>
+      <% @snippet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.select :language, options_for_select([["Ruby", "ruby"], ["Python", "python"], ["JavaScript", "javascript"], ["CoffeeScript", "coffeescript"], ["CSS", "css"], ["HTML", "html"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :code, "Source Code" %><br />
+    <%= f.text_area :code, rows: 14, cols: 50 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Post Snippet" %>
+  </div>
+<% end %>

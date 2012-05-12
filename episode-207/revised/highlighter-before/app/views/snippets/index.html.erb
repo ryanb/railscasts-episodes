@@ -1,0 +1,14 @@
+<h1>Snippets</h1>
+
+<table>
+<% @snippets.each do |snippet| %>
+  <tr>
+    <td><%=  %></td>
+    <td><%= link_to snippet.name, snippet %></td>
+    <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
+    <td><%= link_to 'Destroy', snippet, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<p><%= link_to 'New Snippet', new_snippet_path %></p>
