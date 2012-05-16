@@ -1,0 +1,33 @@
+<head>
+  <title>Raffler</title>
+</head>
+
+<body>
+  <div id="container">{{> raffle}}</div>
+</body>
+
+<template name="raffle">
+  <h1>Raffler</h1>
+
+  <form id="new_entry">
+    <input type="text" name="name" id="new_entry_name">
+    <input type="submit" value="Add">
+  </form>
+  
+  <ul id="entries">
+    {{#each entries}}
+      {{> entry}}
+    {{/each}}
+  </ul>
+  
+  <button id="draw">Draw Winner</button>
+</template>
+
+<template name="entry">
+  <li>
+    {{name}}
+    {{#if winner}}
+      <span class="winner {{winner_class}}">WINNER</span>
+    {{/if}}
+  </li>
+</template>
