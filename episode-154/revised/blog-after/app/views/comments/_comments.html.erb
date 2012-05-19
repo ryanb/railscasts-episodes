@@ -1,0 +1,7 @@
+<div id="comments">
+<% @comments.each do |comment| %>
+  <div class="comment">
+    <%= simple_format comment.content %>
+  </div>
+<% end %>
+</div>

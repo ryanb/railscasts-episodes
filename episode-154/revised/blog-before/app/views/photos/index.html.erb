@@ -1,0 +1,10 @@
+<h1>Photos</h1>
+
+<% @photos.each do |photo| %>
+  <div class="photo">
+    <%= image_tag photo.filename %>
+    <p><%= photo.name %></p>
+  </div>
+<% end %>
+
+<p><%= link_to "New Photo", new_photo_path %></p>

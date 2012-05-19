@@ -1,0 +1,10 @@
+<h1><%= @article.name %></h1>
+
+<%= simple_format @article.content %>
+
+<p><%= link_to "Back to Articles", articles_path %></p>
+
+<h2>Comments</h2>
+
+<%= render "comments/comments" %>
+<%= render "comments/form" %>
