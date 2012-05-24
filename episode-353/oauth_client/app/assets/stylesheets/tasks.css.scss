@@ -1,0 +1,15 @@
+#tasks {
+  margin: 12px 0;
+  padding-left: 20px;
+  li {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+
+#logged_in {
+  margin-top: 20px;
+  &, a {
+    color: #555;
+  }
+}
