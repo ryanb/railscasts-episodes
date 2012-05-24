@@ -1,0 +1,25 @@
+<h1>To Do List</h1>
+
+<% if current_user %>
+  <%= form_for Task.new do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add" %>
+  <% end %>
+
+  <ul id="tasks">
+  <% current_user.tasks.each do |task| %>
+    <li><%= task.name %></li>
+  <% end %>
+  </ul>
+
+  <p id="logged_in">
+    Logged in as <strong><%= current_user.name %></strong>.
+    <%= link_to "Log Out", logout_path %>
+  </p>
+<% else %>
+  <p><strong>Currently not logged in.</strong></p>
+  <p>
+    First <%= link_to "Sign Up", signup_path %>
+    or <%= link_to "Log In", login_path %>
+  </p>
+<% end %>

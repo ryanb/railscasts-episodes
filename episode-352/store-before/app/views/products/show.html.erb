@@ -1,0 +1,20 @@
+<h1><%= @product.name %></h1>
+
+<p>
+  <b>Price:</b>
+  <%= number_to_currency @product.price %>
+</p>
+
+<p>
+  <b>Released on:</b>
+  <%= @product.released_on.strftime("%B %e, %Y") %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category.name %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Destroy', @product, method: :delete, confirm: "Are you sure?" %> |
+<%= link_to 'List Products', products_path %>
