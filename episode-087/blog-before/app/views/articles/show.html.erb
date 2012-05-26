@@ -1,0 +1,7 @@
+<h1><%= @article.name %></h1>
+
+<p class="info">by <%= @article.author %> on <%= @article.published_at.strftime('%b %d, %Y') %></p>
+
+<%= simple_format @article.content %>
+
+<p><%= link_to "Back to Articles", articles_path %></p>
