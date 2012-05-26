@@ -1,0 +1,16 @@
+<% content_for :head, auto_discovery_link_tag(:atom, articles_url(format: "atom")) %>
+
+<%= link_to image_tag("feed-icon-28x28.png"), articles_url(format: "atom") %>
+
+<h1>Superhero Articles</h1>
+
+<div id="articles">
+<% @articles.each do |article| %>
+  <h2><%= link_to article.name, article %></h2>
+  <div class="info">
+    by <%= article.author %>
+    on <%= article.published_at.strftime('%b %d, %Y') %>
+  </div>
+  <div class="content"><%= article.content %></div>
+<% end %>
+</div>
