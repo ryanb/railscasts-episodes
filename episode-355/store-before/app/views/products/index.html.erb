@@ -1,0 +1,21 @@
+<h1>Products</h1>
+
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<table id="products">
+  <tr>
+    <th>Product Name</th>
+    <th>Release Date</th>
+    <th>Price</th>
+  </tr>
+<% @products.each do |product| %>
+  <tr>
+    <td><%= link_to(product.name, product) %></td>
+    <td><%= product.released_at.strftime("%B %e, %Y") %></td>
+    <td><%= number_to_currency(product.price) %></td>
+  </tr>
+<% end %>
+</table>

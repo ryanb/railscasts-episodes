@@ -1,0 +1,17 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#products {
+  margin: 15px 0;
+  th {
+    text-align: left;
+  }
+  td, th {
+    padding: 2px 15px;
+    padding-left: 0;
+  }
+  td:last-child, th:last-child {
+    text-align: right;
+  }
+}
