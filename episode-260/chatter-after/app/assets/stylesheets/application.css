@@ -1,10 +1,8 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
+*= require_self
+*= require_tree .
 */
+
 
 body {
   background-color: #4B7399;
@@ -82,11 +80,29 @@ a {
   margin: 0;
 }
 
-form .field, form .actions {
-  margin: 12px 0;
+ul#chat {
+  list-style: none;
+  padding: 0;
+  width: 300px;
+  height: 150px;
+  border: solid 1px #777;
+  margin: 5px 0;
+  overflow: auto;
 }
 
-.product h2 {
-  font-size: 16px;
-  margin-bottom: 2px;
+ul#chat li {
+  margin: 2px 5px;
+  padding: 0;
+}
+
+ul#chat li .created_at {
+  float: right;
+  color: #777;
+  font-size: 11px;
+  padding-left: 4px;
+  padding-top: 2px;
+}
+
+input#message_content {
+  width: 240px;
 }
