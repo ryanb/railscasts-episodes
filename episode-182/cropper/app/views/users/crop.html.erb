@@ -37,7 +37,7 @@ function update_crop(coords) {
   <%= image_tag @user.avatar.url(:large), :id => "preview" %>
 </div>
 
-<% form_for @user do |f| %>
+<%= form_for @user do |f| %>
   <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
     <%= f.hidden_field attribute, :id => attribute %>
   <% end %>
