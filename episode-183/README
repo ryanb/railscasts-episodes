@@ -6,7 +6,7 @@ Commands
 
   sudo gem update --system
   sudo gem install gemcutter
-  gem tumble
+  sudo gem install tumble
   gem build uniquify.gemspec
   gem push uniquify-0.1.0.gem
   sudo gem install jeweler
