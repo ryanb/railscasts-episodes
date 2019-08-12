@@ -102,7 +102,7 @@ GEM
     uglifier (1.0.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    will_paginate (3.0.2)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
