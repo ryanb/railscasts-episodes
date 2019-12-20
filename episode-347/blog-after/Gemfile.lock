@@ -97,7 +97,7 @@ GEM
     open4 (1.3.0)
     pg (0.13.2)
     polyglot (0.3.3)
-    rack (1.4.1)
+    rack (1.4.7)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-protection (1.2.0)
