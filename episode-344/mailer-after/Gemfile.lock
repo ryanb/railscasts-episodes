@@ -58,7 +58,7 @@ GEM
     queue_classic (2.0.0rc12)
       pg (~> 0.13.2)
       scrolls (~> 0.0.8)
-    rack (1.4.1)
+    rack (1.4.7)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-ssl (1.3.2)
