@@ -105,7 +105,7 @@ GEM
       activesupport (= 3.0.3)
       rake (>= 0.8.7)
       thor (~> 0.14.4)
-    rake (0.8.7)
+    rake (13.0.1)
     rest-client (1.6.1)
       mime-types (>= 1.16)
     ruby-openid (2.1.8)
