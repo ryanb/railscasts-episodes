@@ -63,7 +63,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.4)
-    rake (0.9.2)
+    rake (13.0.1)
     rdoc (3.6.1)
     rsolr (0.12.1)
       builder (>= 2.1.2)
