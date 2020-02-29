@@ -77,7 +77,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.2)
+    rake (13.0.1)
     rdoc (3.9.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
